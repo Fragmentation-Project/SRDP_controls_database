@@ -130,3 +130,19 @@ Year range:
 Excluded countries:
 
 Update schedule: Annual
+
+## Civil war in previous year
+
+**civil_war_prev_yr**
+
+*Binary variable describing whether the country was in civil war in the previous calendar year. This measure includes intrastate and internationalized intrastate wars (according to the UCDP/PRIO definition).*
+
+Unit: Binary.
+
+Source [UCDP/PRIO Armed Conflict Dataset version 21.1](<https://ucdp.uu.se/downloads/index.html#armedconflict>)
+
+Year range:
+
+Excluded countries:
+
+Update schedule: Annual

@@ -39,7 +39,7 @@ uds_raw <- read_csv("http://www.unified-democracy-scores.net/files/20140312/z/ud
 # Checks and balances
 checks_raw <- import(here("data-raw", "DPI2020.dta")) %>% 
   select(country = countryname, year, checks) %>% 
-  haven::zap_label()
+  haven::zap_label() 
 
 # Civil war 
 civil_war_raw <- import("https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-211-RData.zip") %>% 

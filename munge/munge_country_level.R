@@ -82,7 +82,8 @@ civil_war_onset <- civil_war_raw %>%
                              country == "Serbia (Yugoslavia)" & year >= 1993 ~ "Serbia", 
                              TRUE ~ country),
          country = countrycode(country, "country.name", "country.name"),
-         year = as.numeric(year)) %>% 
+         year = as.numeric(year)) %>%
+  arrange(country, year) %>% 
   group_by(conflict_id, country) %>% 
   mutate(civil_war_onset = case_when(is.na(lag(year)) ~ 1, # no previous year indicates onset
                                      year - lag(year) > 2 ~ 1, 
@@ -92,3 +93,12 @@ civil_war_onset <- civil_war_raw %>%
   ungroup() %>% 
   right_join(scope) %>% 
   mutate(civil_war_onset = replace_na(civil_war_onset, 0))
+
+# Civil war in previous year
+civil_war_prev_yr <- civil_war %>%
+  arrange(country, year) %>% 
+  group_by(country) %>% 
+  mutate(civil_war_prev_yr = if_else(lag(civil_war) == 1, 1, 0), 
+         civil_war_prev_yr = if_else(year != 1960, replace_na(civil_war_prev_yr, 0), civil_war_prev_yr)) %>% # account for start of dataset, rather than country
+  select(-civil_war) %>% 
+  ungroup()
