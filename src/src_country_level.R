@@ -44,5 +44,4 @@ checks_raw <- import(here("data-raw", "DPI2020.dta")) %>%
 # Civil war 
 civil_war_raw <- import("https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-211-RData.zip") %>% 
   filter(type_of_conflict %in% 3:4) %>% 
-  mutate(civil_war = 1) %>% 
-  select(conflict_id, country = side_a, year, civil_war)
+  select(conflict_id, country = side_a, year)

@@ -114,3 +114,19 @@ Year range:
 Excluded countries:
 
 Update schedule: Annual
+
+## Civil war onset
+
+**civil_war_onset**
+
+*Binary variable describing whether a new civil conflict resulting in at least 25 battle-related deaths began in the country during the calendar year. The calendar year had to be preceded by two consecutive years of no civil war. This measure includes intrastate and internationalized intrastate wars (according to the UCDP/PRIO definition).*
+
+Unit: Binary.
+
+Source [UCDP/PRIO Armed Conflict Dataset version 21.1](<https://ucdp.uu.se/downloads/index.html#armedconflict>)
+
+Year range:
+
+Excluded countries:
+
+Update schedule: Annual
