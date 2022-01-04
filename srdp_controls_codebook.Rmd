@@ -9,6 +9,10 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Scope
+
+SRDP covers all countries from 1960 to 2020. All countries included in the Correlates of War (State System Membership database)[<https://correlatesofwar.org/data-sets/state-system-membership>] are included in SRDP. SRDP updated this data from 2016 to 2020.
+
 # Country-level data
 
 ## Population
@@ -19,23 +23,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Unit: Total population
 
-Source: [World Bank](https://data.worldbank.org/indicator/SP.POP.TOTL)
+Source: [United Nations Department of Economic and Social Affairs](<https://population.un.org/wpp/Download/Standard/Population/>)
 
-Year range:
-
-Excluded countries:
-
-Update schedule: Annual
-
-## GDP
-
-**gdp_current**
-
-*GDP at purchaser's prices is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data are in current U.S. dollars. Dollar figures for GDP are converted from domestic currencies using single year official exchange rates. For a few countries where the official exchange rate does not reflect the rate effectively applied to actual foreign exchange transactions, an alternative conversion factor is used.*
-
-Unit: Current USD
-
-Source: [World Bank](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD)
+Supplementary source: [World Bank](https://data.worldbank.org/indicator/SP.POP.TOTL)
 
 Year range:
 
