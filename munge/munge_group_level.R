@@ -42,7 +42,7 @@ epr_relative_size <- relative_size_raw %>%
 epr_size <- epr_relative_size %>% 
   left_join(import(here("data", "country_level.rds"))) %>% 
   mutate(epr_size = round(relative_size * population)) %>% 
-  select(kgcid, year, epr_size)
+  select(kgcid, groupname, country, year, epr_size)
 
 mar_relative_size <- import("http://www.mar.umd.edu/data/marupdate_20042006.csv") %>% 
   janitor::clean_names() %>% 
@@ -61,11 +61,19 @@ mar_relative_size <- import("http://www.mar.umd.edu/data/marupdate_20042006.csv"
 relative_size <- epr_relative_size %>% 
   left_join(mar_relative_size) %>% 
   rowwise() %>% 
-  mutate(relative_size = replace_na(mar_relative_size)) %>% 
-  select(-mar_relative_size)
+  mutate(relative_size = replace_na(mar_relative_size),
+         relative_size = round(relative_size, 2)) %>% 
+  select(-mar_relative_size, -mar_size)
 
 size <- epr_size %>% 
   left_join(mar_relative_size) %>% 
   rowwise() %>% 
-  mutate(size = replace_na(epr_size, mar_size))
+  mutate(size = replace_na(epr_size, mar_size), 
+         size = round(size)) %>% 
+  select(kgcid:year, size)
+
+# Group-level data
+df <- group_scope %>% 
+  left_join(relative_size) %>% 
+  left_join(size)
 
