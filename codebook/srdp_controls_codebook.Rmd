@@ -1,0 +1,169 @@
+---
+title: "SRDP Control Variables Codebook"
+output:
+  pdf_document
+header-includes: |
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancypagestyle{plain}{\pagestyle{fancy}}
+  \fancyhead[LE, RO]{Harriet Goers}
+  \fancyhead[RE, LO]{`r format(Sys.time(), '%B %d, %Y')`}
+fontsize: 12pt
+font-family: Calibri
+geometry: margin=0.8in
+spacing: double
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r libraries}
+library(tidyverse)
+library(rio)
+library(here)
+```
+
+```{r datasets}
+
+country_level <- import(here("data", "country_level.rds"))
+country_list <- country_level %>% distinct(country) %>% pull()
+```
+
+# Scope
+
+SRDP covers all countries from 1960 to 2020. All `r length(country_list)` countries included in the Correlates of War [State System Membership database](https://correlatesofwar.org/data-sets/state-system-membership) are included. SRDP updated this data to include state membership from 2016 to 2020.
+
+# Country-level data
+
+## Population
+
+**population**
+
+*Total population is based on the de facto definition of population, which counts all residents regardless of legal status or citizenship. The values shown are midyear estimates.*
+
+Unit: Total population
+
+Source: [United Nations Department of Economic and Social Affairs](https://population.un.org/wpp/Download/Standard/Population/)
+
+Supplementary source: [World Bank](https://data.worldbank.org/indicator/SP.POP.TOTL)
+
+Year range: `r country_level %>% filter(!is.na(population)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(population)) %>% summarise(max(year))`
+
+Excluded countries: `r country_level %>% group_by(country) %>% filter(is.na(population)) %>% distinct(country) %>% pull()`
+
+Update schedule: Annual
+
+## Military expenditure
+
+**milex**
+
+*Military expenditure in local currency at current prices is presented according to both the financial year of each country and according to calendar year, calculated on the assumption that, where financial years do not correspond to calendar years, spending is distributed evenly through the year. Figures in current US \$ are presented according to calendar year.*
+
+Unit: Current USD
+
+Source: [SIRPI](https://www.sipri.org/databases/milex)
+
+Year range: `r country_level %>% filter(!is.na(milex)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(milex)) %>% summarise(max(year))`
+
+Excluded countries: `r country_level %>% group_by(country) %>% filter(is.na(milex)) %>% distinct(country) %>% pull()`
+
+Update schedule: Annual
+
+## Unified Democracy Scores
+
+**uds**
+
+*Unified Democracy Scores (UDS) are a set of measures that leverage the efforts of a variety of experts to provide a composite scale of democracy, accompanied by estimates of measurement uncertainty.*
+
+Unit: Unified democracy score posterior mean
+
+Source: [UDS](http://www.unified-democracy-scores.net/)
+
+Year range: `r country_level %>% filter(!is.na(uds)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(uds)) %>% summarise(max(year))`
+
+Excluded countries: `r country_level %>% filter(year < 2013) %>% group_by(country) %>% filter(is.na(uds)) %>% distinct(country) %>% pull()`
+
+Update schedule: No longer updated.
+
+## Checks and balances
+
+**checks**
+
+*Measure of the degree to which a country's executive and legislature have checks and balances on their power. Equal to one if the country has:*
+
+1.  *No legislature or executive,*
+
+2.  *Unelected legislature or executive,*
+
+3.  *Elected, one candidate,*
+
+4.  *One party, multiple candidates,*
+
+5.  *Multiple legal parties but only one party won seats,*
+
+6.  *Multiple parties did win seats but the largest party received more than 75% of the seats.*
+
+*Countries where legislatures are not competitively elected are considered countries where only the executive wields a check. Incremented by one if there is a chief executive. Incremented by one if the chief executive is competitively elected. Incremented by one if the opposition controls the legislature.*
+
+*In presidential systems, increases by one for (1) each chamber of the legislature unless the president's party has a majority in the lower house and a closed list system is in effect (implying stronger presidential control of his/her party, and therefore of the legislature), and (2) for each party coded as allied with the president's party and which has an ideological (left-right-center) orientation closer to that of the main opposition party than to that of the president's party.*
+
+*In parliamentary systems, increases by one for (1) every party in the government coalition as long as the parties are needed to maintain a majority, and (2) every party in the government coalition that has a position on economic issues (right-left-center) closer to the largest opposition party than to the party of the executive. In parliamentary systems, the prime minister's party is not counted as a check if there is a closed rule in place: the prime minister is presumed in this case to control the party fully.*
+
+Unit: See above.
+
+Source: [Database of Political Institutions](https://data.iadb.org/DataCatalog/Dataset#DataCatalogID=11319/29752)
+
+Year range: `r country_level %>% filter(!is.na(checks)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(checks)) %>% summarise(max(year))`
+
+Excluded countries: `r country_level %>% group_by(country) %>% filter(is.na(checks)) %>% distinct(country) %>% pull()`
+
+Update schedule: Annual
+
+## Civil war
+
+**civil_war**
+
+*Binary variable describing whether the country was in civil war resulting in at least 25 battle-related deaths during the calendar year. This measure includes intrastate and internationalized intrastate wars (according to the UCDP/PRIO definition).*
+
+Unit: Binary.
+
+Source [UCDP/PRIO Armed Conflict Dataset version 21.1](https://ucdp.uu.se/downloads/index.html#armedconflict)
+
+Year range: `r country_level %>% filter(!is.na(civil_war)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(civil_war)) %>% summarise(max(year))`
+
+Excluded countries: None.
+
+Update schedule: Annual
+
+## Civil war onset
+
+**civil_war_onset**
+
+*Binary variable describing whether a new civil conflict resulting in at least 25 battle-related deaths began in the country during the calendar year. The calendar year had to be preceded by two consecutive years of no civil war. This measure includes intrastate and internationalized intrastate wars (according to the UCDP/PRIO definition).*
+
+Unit: Binary.
+
+Source [UCDP/PRIO Armed Conflict Dataset version 21.1](https://ucdp.uu.se/downloads/index.html#armedconflict)
+
+Year range: `r country_level %>% filter(!is.na(civil_war_onset)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(civil_war_onset)) %>% summarise(max(year))`
+
+Excluded countries: None.
+
+Update schedule: Annual
+
+## Civil war in previous year
+
+**civil_war_prev_yr**
+
+*Binary variable describing whether the country was in civil war in the previous calendar year. This measure includes intrastate and internationalized intrastate wars (according to the UCDP/PRIO definition).*
+
+Unit: Binary.
+
+Source [UCDP/PRIO Armed Conflict Dataset version 21.1](https://ucdp.uu.se/downloads/index.html#armedconflict)
+
+Year range: `r country_level %>% filter(!is.na(civil_war_prev_yr)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(civil_war_prev_yr)) %>% summarise(max(year))`
+
+Excluded countries: None.
+
+Update schedule: Annual

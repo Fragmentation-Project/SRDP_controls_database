@@ -102,3 +102,15 @@ civil_war_prev_yr <- civil_war %>%
          civil_war_prev_yr = if_else(year != 1960, replace_na(civil_war_prev_yr, 0), civil_war_prev_yr)) %>% # account for start of dataset, rather than country
   select(-civil_war) %>% 
   ungroup()
+
+# Compile country-level data
+df <- scope %>% 
+  left_join(civil_war) %>% 
+  left_join(civil_war_onset) %>% 
+  left_join(civil_war_prev_yr) %>% 
+  left_join(milex) %>% 
+  left_join(population) %>% 
+  left_join(uds) %>% 
+  left_join(checks)
+
+rio::export(df, here::here("data", "country_level.rds"))
