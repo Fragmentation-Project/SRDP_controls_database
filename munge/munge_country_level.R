@@ -28,12 +28,12 @@ population <- population_raw %>%
   right_join(scope)
 
 # Military expenditure
-milex <- milex_raw %>% 
+milex <- milex_raw %>%
   # filter out regions and standardize names
   mutate(country = countrycode(country, "country.name", "country.name", custom_match = c("German DR" = "German Democratic Republic"))) %>% 
+  # account for separation of Russia and USSR in the source data
+  drop_na(milex) %>% 
   right_join(scope)
-
-skimr::skim(milex)
 
 # Unified Democracy Scores
 uds <- uds_raw %>% 
@@ -43,21 +43,20 @@ uds <- uds_raw %>%
          country = countrycode(country, "country.name", "country.name")) %>% 
   right_join(scope)
 
-skimr::skim(uds)
-
 # Checks and balances
 checks <- checks_raw %>% 
+  filter(country != "Turk Cyprus") %>%
   mutate(country = countrycode(country, "country.name", "country.name",
                                custom_match = c("PRC" = "China", "S. Africa" = "South Africa",
                                                 "Dom. Rep." = "Dominican Republic", 
                                                 "GDR" = "German Democratic Republic",
                                                 "ROK" = "South Korea",
                                                 "PRK" = "North Korea",
-                                                "Cent. Af. Rep." = "Central African Republic")),
+                                                "Cent. Af. Rep." = "Central African Republic",
+                                                "P. N. Guinea" = "Papua New Guinea")),
          checks = na_if(checks, -999)) %>% 
+  drop_na(checks) %>% 
   right_join(scope)
-
-skimr::skim(checks)
 
 # Civil war 
 civil_war <- civil_war_raw %>%
