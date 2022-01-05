@@ -1,0 +1,143 @@
+country,group,numcode,kgcid
+Afghanistan,Tajiks,70003,101
+Algeria,Berbers,61501,102
+Bangladesh,Chittagong Hill Peoples,77101,103
+Belgium,Walloons,,104
+Canada,Indigenous Peoples,2002,105
+China,Tibetans,71005,106
+Colombia,Indigenous Peoples,10004,107
+Cyprus,Turkish Cypriots,35201,108
+Ethiopia,Afars,53001,109
+France,Basque,22002,110
+France,Corsicans,22004,111
+India,Bodos,75016,112
+India,Kashmiri Hindus,,113
+Indonesia,East Timorese,85004,115
+Israel,Palestinians,66603,116
+Italy,South Tyrolians,32501,117
+Mexico,Indigenous Peoples (non-Mayan or Zapotecs),7004,118
+Moldova,Gagauz,35901,119
+Myanmar (Burma),Rohingyas,77501,120
+Myanmar (Burma),Kachins,77503,121
+Niger,Tuaregs,43603,122
+Nigeria,Oron,,123
+Pakistan,Bengalis,,124
+Russia,Chechens,36504,127
+Russia,Tatars,36537,128
+South Africa,Afrikaners,,129
+Sri Lanka,Muslims,,130
+Sri Lanka,Tamils,78002,131
+Taiwan,Aboriginal Taiwanese,71301,132
+Turkey,Kurds,64005,133
+Ukraine,Crimean Russian,36905,134
+United States,Indigenous Peoples,203,135
+Vietnam,Montagnards,81604,136
+Yugoslavia,Kosovar Albanians,34501,137
+Zambia,Lozi,55102,138
+Pakistan,Sarakis,,139
+Australia,Aboriginals,90001,140
+Bhutan,Lhotshampas,76001,141
+Bosnia & Herzegovina,Croats,34602,201
+Canada,Quebecois,2001,202
+China,Uighers,71002,203
+Comoros,Anjouanese,,204
+Ecuador,Lowland Indigenous Peoples,13003,205
+Ethiopia,Eritreans,53002,206
+France,Bretons,22003,207
+Georgia,Abkhazians,37201,208
+India,Kashmiri Muslims,75007,209
+India,Reang (Bru),,210
+India,Sikhs,75012,211
+Indonesia,Papuans,85005,212
+Kazakhstan,Russians,70501,213
+Laos,Hmong,81201,214
+Moldova,Trans-Dniester Slavs,35902,215
+Myanmar (Burma),Karenni,,216
+Myanmar (Burma),Shan,77507,217
+Namibia,East Caprivians,56504,218
+Nigeria,Ibos,47503,219
+Nigeria,Yoruba,47505,220
+Pakistan,Sindhis,77006,221
+Papua New Guinea,Bougainvilleans,91001,222
+Russia,Buryat,36533,223
+Russia,Yakut,36538,224
+Senegal,Casamacias,43301,225
+South Africa,Khoisan,56005,226
+Sudan,Nuba,62503,227
+Tanzania,Zanzibaris,51001,228
+Ukraine,Crimean Tatars,36904,229
+United Kingdom,Catholics,20003,230
+United States,Native Hawaiians,204,231
+Yugoslavia,Hungarians,34504,232
+Yugoslavia,Slovenes,34503,233
+Zimbabwe,Ndebele,55203,234
+Afghanistan,Uzbeks,70004,235
+Angola,Cabindans,54003,301
+Azerbaijan,Lezgins,37302,302
+Bosnia & Herzegovina,Serbs,34601,303
+Brazil,Indigenous Peoples,14002,304
+Chile,Indigenous Peoples,15501,305
+Congo - Kinshasa,Bakongo,49001,306
+Croatia,Serbs,34401,307
+Equatorial Guinea,Bubis,,308
+Ethiopia,Oromos,53004,309
+Georgia,Adzhars,37202,310
+Georgia,South Ossetians,37203,311
+India,Mizos,75013,312
+India,Tripuras,75014,313
+Iran,Kurds,63007,315
+Kyrgyzstan,Uzbeks,70302,316
+North Macedonia,Albanians,34301,317
+Morocco,Saharawis,60003,318
+Myanmar (Burma),Karens,77504,319
+Myanmar (Burma),Wa,,320
+Nigeria,Ijaw,47506,321
+Norway,Saami,,323
+Peru,Lowland Indigenous Peoples,13503,324
+Philippines,Igorots,84002,325
+Russia,Kumyks,36534,326
+Slovakia,Hungarians,31701,327
+Somalia,Isaaq,52001,328
+South Africa,Zulus,56006,329
+Sudan,Southerners,62501,330
+Sweden,Saami,,331
+Trinidad & Tobago,Tobagonians,,332
+United Kingdom,Cornish,,333
+United States,Puerto Ricans,,334
+Yugoslavia,Albanians,,335
+Yugoslavia,Montenegrins,,336
+Azerbaijan,Armenains,37301,401
+Belgium,Flemings,,402
+Cameroon,Westerners,47102,403
+Chad,Southerners,48302,404
+China,Mongols,,405
+Congo - Kinshasa,Lunda and Yeke,49005,406
+Djibouti,Afars,52201,407
+Ethiopia,Somalis,53005,408
+Finland,Saami,,409
+India,Assamese,75015,410
+India,Kashmiri Buddhist Ladakhis,,411
+India,Nagas,75009,412
+Indonesia,Acehnese,85006,413
+Iraq,Kurds,64504,414
+Italy,Sardinians,32503,415
+Mali,Tuaregs,43201,417
+Myanmar (Burma),Chin/Zomis,77502,418
+Myanmar (Burma),Mons,77505,419
+Nicaragua,Indigenous Peoples and Creoles,9302,420
+Nigeria,Ogoni,47504,421
+Pakistan,Baluchis,77002,422
+Pakistan,Pashtuns (Pathans),77005,423
+Philippines,Moros,84003,424
+Romania,Magyars (Hungarians),36002,425
+Russia,Lezgins,36531,426
+Somalia,Puntland Darods,,427
+Spain,Basques,23001,428
+Spain,Catalans,23002,429
+Switzerland,Jurassians,22501,430
+Thailand,Malay-Mulsims,80002,431
+Uganda,Baganda,50003,432
+United Kingdom,Scots,20004,433
+Uzbekistan,Tajiks,70402,434
+Yugoslavia,Croats,34507,435
+Yugoslavia,Sandzak Muslims,34505,436
