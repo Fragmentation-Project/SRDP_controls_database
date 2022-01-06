@@ -21,10 +21,13 @@ scope <- import("https://correlatesofwar.org/data-sets/state-system-membership/s
   select(country, year) 
 
 # Population
-# Note: UN and World Bank do not provide population values for Czechoslovakia, 
-# Yugoslavia, Zanzibar, German Federal Republic, German Democratic Republic, 
-# Yemen Arab Republic, Yemen People's Republic, Republic of Vietnam
 population <- population_raw %>% 
+  right_join(scope)
+
+# GDP
+gdp <- gdp_raw %>% 
+  mutate(country = countrycode(country, "country.name", "country.name")) %>% 
+  select(country, year = date, gdp = value) %>% 
   right_join(scope)
 
 # Military expenditure
@@ -123,6 +126,7 @@ df <- scope %>%
   left_join(civil_war_prev_yr) %>% 
   left_join(milex) %>% 
   left_join(population) %>% 
+  left_join(gdp) %>% 
   left_join(uds) %>% 
   left_join(checks) %>% 
   left_join(fh) %>% 

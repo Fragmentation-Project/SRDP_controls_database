@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.12.21)  5 JAN 2022 11:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.12.21)  6 JAN 2022 11:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -489,12 +489,6 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
 (/Users/harrietgoers/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 84.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 84.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 84.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -542,29 +536,44 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5] (./srdp_controls_codebook.aux)
+[5]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+16.
+(/Users/harrietgoers/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6] (./srdp_controls_codebook.aux)
 Package rerunfilecheck Info: File `srdp_controls_codebook.out' has not changed.
 
-(rerunfilecheck)             Checksum: A4489681638D374F9B7F04B803341F17;1235.
+(rerunfilecheck)             Checksum: 508AE91984B6C7CCFEDC1C3E7640BCC7;1560.
  ) 
 Here is how much of TeX's memory you used:
- 10664 strings out of 480313
- 166952 string characters out of 5896030
- 464488 words of memory out of 5000000
- 28344 multiletter control sequences out of 15000+600000
- 453321 words of font info for 67 fonts, out of 8000000 for 9000
+ 10695 strings out of 480313
+ 167528 string characters out of 5896030
+ 462596 words of memory out of 5000000
+ 28370 multiletter control sequences out of 15000+600000
+ 441603 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,12n,63p,256b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,63p,257b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/harrietgoers/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}
 </Users/harrietgoers/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pf
 b></Users/harrietgoers/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.p
 fb></Users/harrietgoers/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.
 pfb></Users/harrietgoers/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri1
-2.pfb>
-Output written on srdp_controls_codebook.pdf (5 pages, 122918 bytes).
+2.pfb></Users/harrietgoers/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmt
+t12.pfb>
+Output written on srdp_controls_codebook.pdf (6 pages, 146433 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 148 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

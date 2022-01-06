@@ -28,9 +28,6 @@ library(here)
 # country level
 country_level <- import(here("data", "country_level.rds"))
 country_list <- country_level %>% distinct(country) %>% pull()
-
-# group level
-source(here("munge", "munge_group_level.R"))
 ```
 
 # Scope
@@ -54,6 +51,22 @@ Supplementary source: [World Bank](https://data.worldbank.org/indicator/SP.POP.T
 Year range: `r country_level %>% filter(!is.na(population)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(population)) %>% summarise(max(year))`
 
 Excluded countries: `r country_level %>% group_by(country) %>% filter(is.na(population)) %>% distinct(country) %>% pull()`
+
+Update schedule: Annual
+
+## GDP
+
+**gdp**
+
+*GDP at purchaser's prices is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data are in current U.S. dollars. Dollar figures for GDP are converted from domestic currencies using single year official exchange rates. For a few countries where the official exchange rate does not reflect the rate effectively applied to actual foreign exchange transactions, an alternative conversion factor is used.*
+
+Unit: Current USD
+
+Source: [World Bank](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD)
+
+Year range: `r country_level %>% filter(!is.na(gdp)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(gdp)) %>% summarise(max(year))`
+
+Excluded countries: `r country_level %>% group_by(country) %>% filter(is.na(gdp)) %>% distinct(country) %>% pull()`
 
 Update schedule: Annual
 
@@ -189,6 +202,4 @@ Excluded groups:
 
 Update schedule:
 
-Missing data: Data are first collected from the EPR. The EPR does not fully cover `r epr_relative_size %>% filter(is.na(relative_size)) %>% distinct(groupname) %>% pull()`.
-
-Next, data were collected from Minorities at Risk. MAR only provides data from 2004 to 2006. SRDP uses the average group size across 2004 to 2006 to calculate each group's size relative to the country's population (drawn from the `population` variable described above). To maintain as much consistency as possible, SRDP does not use the relative group population size provided by MAR for 2004 to 2006. Rather, we calculate groups' relative size in 2004 to 2006 using the group's absolute size and population data. After using MAR data to replace missing values from EPR, we are still missing data for `r relative_size %>% filter(is.na(relative_size)) %>% distinct(groupname) %>% pull()`.
+Missing data: Data are first collected from the EPR. Next, data were collected from Minorities at Risk. MAR only provides data from 2004 to 2006. SRDP uses the average group size across 2004 to 2006 to calculate each group's size relative to the country's population (drawn from the `population` variable described above). To maintain as much consistency as possible, SRDP does not use the relative group population size provided by MAR for 2004 to 2006. Rather, we calculate groups' relative size in 2004 to 2006 using the group's absolute size and population data.

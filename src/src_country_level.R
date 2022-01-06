@@ -25,6 +25,9 @@ population_raw <- import("https://population.un.org/wpp/Download/Files/1_Indicat
   mutate(population = replace_na(population, wb_population)) %>% 
   select(-wb_population)
 
+# GDP
+gdp_raw <- wbstats::wb_data(indicator = "NY.GDP.MKTP.CD", return_wide = FALSE)
+
 # Military expenditure
 milex_raw <- import("https://sipri.org/sites/default/files/SIPRI-Milex-data-1949-2020_0.xlsx", 
                     sheet = "Current USD",
