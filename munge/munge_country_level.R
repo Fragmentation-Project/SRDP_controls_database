@@ -20,6 +20,12 @@ scope <- import("https://correlatesofwar.org/data-sets/state-system-membership/s
   ungroup() %>% 
   select(country, year) 
 
+# Regions
+regions <- wbstats::wb_countries() %>% 
+  filter(region != "Aggregates") %>% 
+  select(country, region) %>% 
+  mutate(country = countrycode(country, "country.name", "country.name"))
+
 # Population
 population <- population_raw %>% 
   right_join(scope)
@@ -121,6 +127,7 @@ polity <- polity_raw %>%
 
 # Compile country-level data
 df <- scope %>% 
+  left_join(regions) %>% 
   left_join(civil_war) %>% 
   left_join(civil_war_onset) %>% 
   left_join(civil_war_prev_yr) %>% 

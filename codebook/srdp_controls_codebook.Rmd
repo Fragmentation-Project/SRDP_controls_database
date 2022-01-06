@@ -39,6 +39,16 @@ SRDP covers all countries from 1960 to 2020. All `r length(country_list)` countr
 
 # Country-level data
 
+## Region
+
+**region**
+
+*The geographic region of the country.*
+
+Unit: Region.
+
+Source: World Bank
+
 ## Population
 
 **population**
