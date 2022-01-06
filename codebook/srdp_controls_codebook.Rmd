@@ -173,13 +173,13 @@ Update schedule: Annual
 
 # Group-level data
 
-# Relative size
+## Relative size
 
 **relative_size**
 
 *The groups relative sizes as a share of the country's total population.*
 
-Source: [Ethnic Power Relations](<https://icr.ethz.ch/data/epr/core/>)
+Source: [Ethnic Power Relations](https://icr.ethz.ch/data/epr/core/)
 
 Supplementary sources: [Minorities at Risk](http://www.mar.umd.edu/mar_data.asp)
 
@@ -189,6 +189,6 @@ Excluded groups:
 
 Update schedule:
 
-Missing data: Data are first collected from the EPR. The EPR does not fully cover `r epr_relative_size %>% filter(is.na(relative_size)) %>% distinct(groupname) %>% pull()`. 
+Missing data: Data are first collected from the EPR. The EPR does not fully cover `r epr_relative_size %>% filter(is.na(relative_size)) %>% distinct(groupname) %>% pull()`.
 
 Next, data were collected from Minorities at Risk. MAR only provides data from 2004 to 2006. SRDP uses the average group size across 2004 to 2006 to calculate each group's size relative to the country's population (drawn from the `population` variable described above). To maintain as much consistency as possible, SRDP does not use the relative group population size provided by MAR for 2004 to 2006. Rather, we calculate groups' relative size in 2004 to 2006 using the group's absolute size and population data. After using MAR data to replace missing values from EPR, we are still missing data for `r relative_size %>% filter(is.na(relative_size)) %>% distinct(groupname) %>% pull()`.

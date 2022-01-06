@@ -4,6 +4,7 @@ library(tidyverse)
 library(rio)
 library(here)
 library(countrycode)
+library(democracyData)
 
 # Population
 population_raw <- import("https://population.un.org/wpp/Download/Files/1_Indicators%20(Standard)/EXCEL_FILES/1_Population/WPP2019_POP_F01_1_TOTAL_POPULATION_BOTH_SEXES.xlsx", 
@@ -46,3 +47,8 @@ checks_raw <- import(here("data-raw", "DPI2020.dta")) %>%
 civil_war_raw <- import("https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-211-RData.zip") %>% 
   filter(type_of_conflict %in% 3:4) %>% 
   select(conflict_id, country = side_a, year)
+
+# Democracy
+fh_raw <- download_fh()
+
+polity_raw <- download_polity_annual()

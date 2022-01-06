@@ -102,6 +102,20 @@ civil_war_prev_yr <- civil_war %>%
   select(-civil_war) %>% 
   ungroup()
 
+# Freedom House
+fh <- fh_raw %>% 
+  mutate(country = countrycode(fh_country, "country.name", "country.name", 
+                               custom_match = c("Micronesia" = "Micronesia (Federated States of)"))) %>% 
+  select(country, year, fh_political_rights = pr, fh_civil_liberties = cl, fh_status = status) %>% 
+  right_join(scope)
+
+# PolityV
+polity <- polity_raw %>% 
+  mutate(country = countrycode(polity_annual_country, "country.name", "country.name"),
+         across(democ:polity, ~if_else(.x < -10, NA_real_, .x))) %>% 
+  select(country, year, polity_democracy = democ, polity_autocracy = autoc, polity_total = polity) %>% 
+  right_join(scope)
+
 # Compile country-level data
 df <- scope %>% 
   left_join(civil_war) %>% 
@@ -110,6 +124,9 @@ df <- scope %>%
   left_join(milex) %>% 
   left_join(population) %>% 
   left_join(uds) %>% 
-  left_join(checks)
+  left_join(checks) %>% 
+  left_join(fh) %>% 
+  left_join(polity)
 
 rio::export(df, here::here("data", "country_level.rds"))
+rio::export(df, here::here("data", "country_level.csv"))

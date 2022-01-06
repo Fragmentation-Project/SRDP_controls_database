@@ -78,4 +78,5 @@ df <- group_scope %>%
   left_join(size)
 
 export(df, here("data", "group_level.rds"))
+export(df, here("data", "group_level.csv"))
 
