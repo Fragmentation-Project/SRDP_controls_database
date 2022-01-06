@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.12.21)  6 JAN 2022 11:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.12.21)  6 JAN 2022 11:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -538,7 +538,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
-16.
+23.
 (/Users/harrietgoers/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -553,13 +553,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [6] (./srdp_controls_codebook.aux)
 Package rerunfilecheck Info: File `srdp_controls_codebook.out' has not changed.
 
-(rerunfilecheck)             Checksum: 508AE91984B6C7CCFEDC1C3E7640BCC7;1560.
+(rerunfilecheck)             Checksum: 6FC133620E3E9CEC25C6B51EF7B69689;1637.
  ) 
 Here is how much of TeX's memory you used:
- 10695 strings out of 480313
- 167528 string characters out of 5896030
- 462596 words of memory out of 5000000
- 28370 multiletter control sequences out of 15000+600000
+ 10699 strings out of 480313
+ 167562 string characters out of 5896030
+ 462672 words of memory out of 5000000
+ 28372 multiletter control sequences out of 15000+600000
  441603 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,12n,63p,257b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -570,10 +570,10 @@ fb></Users/harrietgoers/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.
 pfb></Users/harrietgoers/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri1
 2.pfb></Users/harrietgoers/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmt
 t12.pfb>
-Output written on srdp_controls_codebook.pdf (6 pages, 146433 bytes).
+Output written on srdp_controls_codebook.pdf (6 pages, 147639 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 
