@@ -103,7 +103,103 @@ Year range: `r country_level %>% filter(!is.na(uds)) %>% summarise(min(year))` t
 
 Countries with incomplete data: `r country_level %>% filter(year < 2013) %>% group_by(country) %>% filter(is.na(uds)) %>% distinct(country) %>% pull()`
 
-Update schedule: No longer updated.
+Update schedule: No longer updated
+
+## Freedom House political rights
+
+**fh_political_rights**
+
+*A composite measure of the political rights citizens of a country enjoy. For a more complete definition, see [Freedom House's methodology](https://freedomhouse.org/reports/freedom-world/freedom-world-research-methodology).*
+
+Unit: See above.
+
+Source: [Freedom House](https://freedomhouse.org/report/freedom-world/2021/democracy-under-siege)
+
+Year range: `r country_level %>% filter(!is.na(fh_political_rights)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(fh_political_rights)) %>% summarise(max(year))`
+
+Countries with incomplete data: `r country_level %>% filter(year > 1971) %>% group_by(country) %>% filter(is.na(fh_political_rights)) %>% distinct(country) %>% pull()`
+
+Update schedule: Annual
+
+## Freedom House civil liberties
+
+**fh_civil_liberties**
+
+*A composite measure of the civil liberties citizens of a country enjoy. For a more complete definition, see [Freedom House's methodology](https://freedomhouse.org/reports/freedom-world/freedom-world-research-methodology).*
+
+Unit: See above.
+
+Source: [Freedom House](https://freedomhouse.org/report/freedom-world/2021/democracy-under-siege)
+
+Year range: `r country_level %>% filter(!is.na(fh_civil_liberties)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(fh_civil_liberties)) %>% summarise(max(year))`
+
+Countries with incomplete data: `r country_level %>% filter(year > 1971) %>% group_by(country) %>% filter(is.na(fh_civil_liberties)) %>% distinct(country) %>% pull()`
+
+Update schedule: Annual
+
+## Freedom House status
+
+**fh_status**
+
+*A categorical measure of the political rights and civil liberties citizens of a country enjoy. For a more complete definition, see [Freedom House's methodology](https://freedomhouse.org/reports/freedom-world/freedom-world-research-methodology).*
+
+Unit: See above.
+
+Source: [Freedom House](https://freedomhouse.org/report/freedom-world/2021/democracy-under-siege)
+
+Year range: `r country_level %>% filter(!is.na(fh_status)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(fh_status)) %>% summarise(max(year))`
+
+Countries with incomplete data: `r country_level %>% filter(year > 1971) %>% group_by(country) %>% filter(is.na(fh_status)) %>% distinct(country) %>% pull()`
+
+Update schedule: Annual
+
+## Polity democracy score
+
+**polity_democracy**
+
+*A composite measure of democracy in a country. For a more complete definition, see the [PolityV methodology](https://www.systemicpeace.org/inscr/p4manualv2016.pdf).*
+
+Unit: See above.
+
+Source: [PolityV](http://www.systemicpeace.org/inscrdata.html)
+
+Year range: `r country_level %>% filter(!is.na(polity_democracy)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(polity_democracy)) %>% summarise(max(year))`
+
+Countries with incomplete data: `r country_level %>% group_by(country) %>% filter(is.na(polity_democracy)) %>% distinct(country) %>% pull()`
+
+Update schedule: Annual
+
+## Polity autocracy score
+
+**polity_autocracy**
+
+*A composite measure of autocracy in a country. For a more complete definition, see the [PolityV methodology](https://www.systemicpeace.org/inscr/p4manualv2016.pdf).*
+
+Unit: See above.
+
+Source: [PolityV](http://www.systemicpeace.org/inscrdata.html)
+
+Year range: `r country_level %>% filter(!is.na(polity_autocracy)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(polity_autocracy)) %>% summarise(max(year))`
+
+Countries with incomplete data: `r country_level %>% group_by(country) %>% filter(is.na(polity_autocracy)) %>% distinct(country) %>% pull()`
+
+Update schedule: Annual
+
+## Polity total score
+
+**polity_total**
+
+*A composite measure of the net level of democracy and autocracy in a country. Caluculated by subtracting the country's autocracy score from its democracy score. For a more complete definition, see the [PolityV methodology](https://www.systemicpeace.org/inscr/p4manualv2016.pdf).*
+
+Unit: See above. Ranges from -10 (full autocracy) to 10 (full democracy).
+
+Source: [PolityV](http://www.systemicpeace.org/inscrdata.html)
+
+Year range: `r country_level %>% filter(!is.na(polity_total)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(polity_total)) %>% summarise(max(year))`
+
+Countries with incomplete data: `r country_level %>% group_by(country) %>% filter(is.na(polity_total)) %>% distinct(country) %>% pull()`
+
+Update schedule: Annual
 
 ## Checks and balances
 
