@@ -245,11 +245,11 @@ Countries with incomplete data: `r country_level %>% group_by(country) %>% filte
 
 Update schedule: Annual
 
-## Civil war
+## Civil war incidence
 
 **civil_war**
 
-*Binary variable describing whether the country was in civil war resulting in at least 25 battle-related deaths during the calendar year. This measure includes intrastate and internationalized intrastate wars (according to the UCDP/PRIO definition).*
+*Binary variable describing indicating the occurrence of a civil war leading to at least twenty-five battle-deaths in a calendar year. This measure includes intrastate and internationalized intrastate wars (according to the UCDP/PRIO definition).*
 
 Unit: Binary.
 
@@ -265,7 +265,7 @@ Update schedule: Annual
 
 **civil_war_onset**
 
-*Binary variable describing whether a new civil conflict resulting in at least 25 battle-related deaths began in the country during the calendar year. The calendar year had to be preceded by two consecutive years of no civil war. This measure includes intrastate and internationalized intrastate wars (according to the UCDP/PRIO definition).*
+*Binary variable indicating the outbreak of civil war leading to at least twenty-five battle-deaths in a calendar year preceded by at least two years of peace. This measure includes intrastate and internationalized intrastate wars (according to the UCDP/PRIO definition).*
 
 Unit: Binary.
 
@@ -281,7 +281,7 @@ Update schedule: Annual
 
 **civil_war_prev_yr**
 
-*Binary variable describing whether the country was in civil war in the previous calendar year. This measure includes intrastate and internationalized intrastate wars (according to the UCDP/PRIO definition).*
+*Binary variable indicating civil war in the state in the previous calendar year (twenty-five battle-deaths threshold). This measure includes intrastate and internationalized intrastate wars (according to the UCDP/PRIO definition).*
 
 Unit: Binary.
 
