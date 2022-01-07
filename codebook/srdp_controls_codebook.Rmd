@@ -169,7 +169,7 @@ Update schedule: Annual
 
 *A composite measure of democracy in a country. For a more complete definition, see the [PolityV methodology](https://www.systemicpeace.org/inscr/p4manualv2016.pdf).*
 
-Unit: See above.
+Unit: Score from 0 to 10. A higher score indicates higher levels of democracy.
 
 Source: [PolityV](http://www.systemicpeace.org/inscrdata.html)
 
@@ -185,7 +185,7 @@ Update schedule: Annual
 
 *A composite measure of autocracy in a country. For a more complete definition, see the [PolityV methodology](https://www.systemicpeace.org/inscr/p4manualv2016.pdf).*
 
-Unit: See above.
+Unit: Score from -10 to 0. A lower score indicates higher levels of autocracy.
 
 Source: [PolityV](http://www.systemicpeace.org/inscrdata.html)
 
