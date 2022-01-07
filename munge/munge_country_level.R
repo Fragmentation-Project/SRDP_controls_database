@@ -99,11 +99,20 @@ civil_war_onset <- civil_war_raw %>%
   mutate(civil_war_onset = replace_na(civil_war_onset, 0))
 
 # Civil war in previous year
-civil_war_prev_yr <- civil_war %>%
+civil_war_prev_yr <- civil_war_raw %>%
+  distinct(country, year) %>% 
+  mutate(country = str_remove(country, "Government of "),
+         country = case_when(country == "Hyderabad" ~ "India", 
+                             country == "Serbia (Yugoslavia)" & year < 1993 ~ "Yugoslavia",
+                             country == "Serbia (Yugoslavia)" & year >= 1993 ~ "Serbia", 
+                             TRUE ~ country),
+         country = countrycode(country, "country.name", "country.name"),
+         year = as.numeric(year), 
+         civil_war = 1) %>% 
   arrange(country, year) %>% 
   group_by(country) %>% 
-  mutate(civil_war_prev_yr = if_else(lag(civil_war) == 1, 1, 0), 
-         civil_war_prev_yr = if_else(year != 1960, replace_na(civil_war_prev_yr, 0), civil_war_prev_yr)) %>% # account for start of dataset, rather than country
+  mutate(civil_war_prev_yr = if_else(lag(civil_war) == 1, 1, 0),
+         civil_war_prev_yr = if_else(year != 1946, replace_na(civil_war_prev_yr, 0), civil_war_prev_yr)) %>% # account for start of dataset
   select(-civil_war) %>% 
   ungroup()
 
