@@ -35,7 +35,7 @@ group_level <- import(here("data", "group_level.rds"))
 
 # Scope
 
-SRDP covers all countries with organizations actively pursuing self-determination claims from 1960 to 2003 included in the CIDCM Peace and Conflict report.
+SRDP covers all countries with organizations actively pursuing self-determination claims from 1960 to 2003 included in the CIDCM Peace and Conflict report. This includes `r country_level %>% distinct(country) %>% nrow()` countries: `r country_level %>% distinct(country) %>% pull()`. 
 
 # Country-level data
 
@@ -301,7 +301,7 @@ Update schedule: Annual
 
 *The groups' relative sizes as a share of the country's total population.*
 
-Source: [Ethnic Power Relations](https://icr.ethz.ch/data/epr/core/)
+Source: [Ethnic Power Relations](https://icr.ethz.ch/data/epr/core/) and [United Nations Department of Economic and Social Affairs](https://population.un.org/wpp/Download/Standard/Population/)
 
 Supplementary sources: [Minorities at Risk](http://www.mar.umd.edu/mar_data.asp)
 
@@ -309,9 +309,9 @@ Year range: `r group_level %>% filter(!is.na(relative_size)) %>% summarise(min(y
 
 Groups with incomplete data: `r group_level %>% group_by(groupname) %>% filter(is.na(relative_size)) %>% distinct(groupname) %>% pull()`
 
-Update schedule:
-
 Missing data: Data are first collected from the EPR. Next, data were collected from Minorities at Risk. MAR only provides data from 2004 to 2006. SRDP uses the average group size across 2004 to 2006 to calculate each group's size relative to the country's population (drawn from the `population` variable described above). To maintain as much consistency as possible, SRDP does not use the relative group population size provided by MAR for 2004 to 2006. Rather, we calculate groups' relative size in 2004 to 2006 using the group's absolute size and population data.
+
+Update schedule: Annual
 
 ## Size
 
@@ -328,3 +328,5 @@ Year range: `r group_level %>% filter(!is.na(relative_size)) %>% summarise(min(y
 Groups with incomplete data: `r group_level %>% group_by(groupname) %>% filter(is.na(relative_size)) %>% distinct(groupname) %>% pull()`
 
 Missing data: Data are first collected from the EPR. Next, data were collected from Minorities at Risk. MAR only provides data from 2004 to 2006. SRDP uses the average group size across 2004 to 2006 to provide values for each missing year.
+
+Update schedule: Annual
