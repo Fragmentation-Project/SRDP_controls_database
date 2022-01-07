@@ -6,6 +6,17 @@ library(here)
 library(countrycode)
 library(democracyData)
 
+# Country membership
+country_membership <- import("https://correlatesofwar.org/data-sets/state-system-membership/states2016/at_download/file") %>% 
+  mutate(country = countrycode(statenme, "country.name", "country.name"),
+         endyear = if_else(endyear == 2016L, 2020L, endyear)) %>% 
+  select(country, styear, endyear)
+
+# SRDP membership
+srdp_country_membership <- import("/Users/harrietgoers/Documents/github/SRDP/db_migration/data-raw/SRDP_Mvmt_2019_release.dta") %>% 
+  distinct(country) %>% 
+  arrange(country)
+
 # Population
 population_raw <- import("https://population.un.org/wpp/Download/Files/1_Indicators%20(Standard)/EXCEL_FILES/1_Population/WPP2019_POP_F01_1_TOTAL_POPULATION_BOTH_SEXES.xlsx", 
        sheet = "ESTIMATES", 
@@ -55,3 +66,41 @@ civil_war_raw <- import("https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-211
 fh_raw <- download_fh()
 
 polity_raw <- download_polity_annual()
+
+# Federal
+federal_countries_raw <- tibble(
+  
+  country = c("Argentina", "Australia", "Austria", "Belgium", 
+              "Bosnia and Herzegovina", "Brazil", "Canada", 
+              "Comoros", "Ethiopia", "Germany", "India", "Malaysia", 
+              "Mexico", "Micronesia (Federated States of)",
+              "Nigeria", "Pakistan", "Russia", "St. Kitts and Nevis",
+              "Serbia and Montenegro", "South Africa", "Spain", 
+              "Switzerland", "United Arab Emirates", "United States", 
+              "Venezuela"),
+  source = "Handbook of federal countries, 2005"
+  
+) %>% 
+  bind_rows(
+    
+    tibble(
+      
+      country = c("United Arab Emirates", "Argentina", "Canada", "Nepal",
+                  "Pakistan", "Russia", "Australia", "Germany", "India",
+                  "Malaysia", "Ethiopia", "Nigeria", "United States", 
+                  "Venezuela", "Belgium", "Bosnia and Herzegovina", "Iraq", 
+                  "South Africa",
+                  "Spain"),
+      source = "Other"
+      
+    )
+    
+  )
+
+federal_countries <- c("Argentina", "Australia", "Austria", "Belgium", "Bosnia and Herzegovina",
+                       "Brazil", "Canada", "Comoros", "Ethiopia", "Germany", "India", 
+                       "Malaysia", "Mexico", "Micronesia (Federated States of)", 
+                       "Nigeria", "Pakistan", "Russia", "St. Kitts and Nevis", 
+                       "Serbia and Montenegro", "South Africa", "Spain", "Switzerland", 
+                       "United Arab Emirates", "United States", "Venezuela", "Nepal", 
+                       "Iraq")

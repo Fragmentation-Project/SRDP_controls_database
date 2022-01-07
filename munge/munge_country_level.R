@@ -5,20 +5,16 @@ library(countrycode)
 source("src/src_country_level.R")
 
 # SRDP scope
-scope <- import("https://correlatesofwar.org/data-sets/state-system-membership/states2016/at_download/file") %>% 
+scope <- srdp_country_membership %>% 
+  mutate(country = countrycode(country, "country.name", "country.name")) %>% 
+  left_join(country_membership) %>% 
   pivot_longer(c(styear, endyear), values_to = "year") %>% 
-  # update dataset to current year (no new states from 2016 to 2020)
-  mutate(year = as.double(year), 
-         year = case_when(statenme == "Yugoslavia" & year == 2016 ~ 1992,
-                          year == 2016 ~ 2020,
-                          TRUE ~ year)) %>% 
-  group_by(ccode) %>% 
+  mutate(year = if_else(country == "Yugoslavia" & year == 2020L, 1992L, year)) %>% 
+  group_by(country) %>% 
   expand(year = full_seq(year, 1)) %>% 
   # filter to SRDP coverage (from 1960)
   filter(year >= 1960) %>% 
-  mutate(country = countrycode(ccode, "cown", "country.name", custom_match = c(`260` = "German Federal Republic"))) %>% 
-  ungroup() %>% 
-  select(country, year) 
+  ungroup()
 
 # Regions
 regions <- wbstats::wb_countries() %>% 
@@ -125,6 +121,14 @@ polity <- polity_raw %>%
   select(country, year, polity_democracy = democ, polity_autocracy = autoc, polity_total = polity) %>% 
   right_join(scope)
 
+# Federalism
+federal_countries <- federal_countries_raw %>% 
+  mutate(country = countrycode(country, "country.name", "country.name"),
+         federal = 1) %>% 
+  distinct(country, federal) %>% 
+  right_join(scope) %>% 
+  mutate(federal = replace_na(federal, 0))
+  
 # Compile country-level data
 df <- scope %>% 
   left_join(regions) %>% 

@@ -35,7 +35,7 @@ group_level <- import(here("data", "group_level.rds"))
 
 # Scope
 
-SRDP covers all countries from 1960 to 2020. All `r length(country_list)` countries included in the Correlates of War [State System Membership database](https://correlatesofwar.org/data-sets/state-system-membership) are included. SRDP updated this data to include state membership from 2016 to 2020.
+SRDP covers all countries with organizations actively pursuing self-determination claims from 1960 to 2003 included in the CIDCM Peace and Conflict report.
 
 # Country-level data
 
