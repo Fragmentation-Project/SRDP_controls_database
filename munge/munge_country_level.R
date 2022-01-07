@@ -114,7 +114,9 @@ civil_war_prev_yr <- civil_war_raw %>%
   mutate(civil_war_prev_yr = if_else(lag(civil_war) == 1, 1, 0),
          civil_war_prev_yr = if_else(year != 1946, replace_na(civil_war_prev_yr, 0), civil_war_prev_yr)) %>% # account for start of dataset
   select(-civil_war) %>% 
-  ungroup()
+  ungroup() %>% 
+  right_join(scope) %>% 
+  mutate(civil_war_prev_yr = replace_na(civil_war_prev_yr, 0))
 
 # Freedom House
 fh <- fh_raw %>% 
@@ -128,6 +130,8 @@ polity <- polity_raw %>%
   mutate(country = countrycode(polity_annual_country, "country.name", "country.name"),
          across(democ:polity, ~if_else(.x < -10, NA_real_, .x))) %>% 
   select(country, year, polity_democracy = democ, polity_autocracy = autoc, polity_total = polity) %>% 
+  distinct(country, year, polity_democracy, polity_autocracy, polity_total) %>% 
+  filter(country != "Sudan" | (country == "Sudan" & year == 2011 & polity_democracy == 1)) %>% 
   right_join(scope)
 
 # Federalism
