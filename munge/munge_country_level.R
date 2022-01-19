@@ -6,14 +6,14 @@ source("src/src_country_level.R")
 
 # SRDP scope
 scope <- srdp_country_membership %>% 
-  mutate(country = countrycode(country, "country.name", "country.name")) %>% 
+  mutate(country = countrycode(country, "country.name", "country.name")) %>% # make country names consistent across data
   left_join(country_membership) %>% 
   pivot_longer(c(styear, endyear), values_to = "year") %>% 
-  mutate(year = if_else(country == "Yugoslavia" & year == 2020L, 1992L, year)) %>% 
+  mutate(year = if_else(country == "Yugoslavia" & year == 2020L, 1992L, year)) %>% # fix error in end year
   group_by(country) %>% 
   expand(year = full_seq(year, 1)) %>% 
   # filter to SRDP coverage (from 1960)
-  filter(year >= 1960) %>% 
+  filter(year >= 1960) %>% # restrict to SRDP year range (1960 to 2020)
   ungroup()
 
 # Regions

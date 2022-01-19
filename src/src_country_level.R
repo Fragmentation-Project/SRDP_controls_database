@@ -8,8 +8,8 @@ library(democracyData)
 
 # Country membership
 country_membership <- import("https://correlatesofwar.org/data-sets/state-system-membership/states2016/at_download/file") %>% 
-  mutate(country = countrycode(statenme, "country.name", "country.name"),
-         endyear = if_else(endyear == 2016L, 2020L, endyear)) %>% 
+  mutate(country = countrycode(statenme, "country.name", "country.name"), # make names consistent across all data
+         endyear = if_else(endyear == 2016L, 2020L, endyear)) %>% # update end year to reflect current membership rather than end of data collection
   select(country, styear, endyear)
 
 # SRDP membership
@@ -25,7 +25,7 @@ population_raw <- import("https://population.un.org/wpp/Download/Files/1_Indicat
   janitor::clean_names() %>% 
   mutate(across(year:population, as.numeric),
          country = countrycode::countrycode(country_code, "iso3n", "country.name"), 
-         population = population * 1000) %>% 
+         population = population * 1000) %>% # convert to raw value
   select(country, year, population) %>% 
   drop_na(country) %>% 
   # fill missing data with World Bank data
@@ -45,7 +45,7 @@ milex_raw <- import("https://sipri.org/sites/default/files/SIPRI-Milex-data-1949
                     skip = 4) %>% 
   pivot_longer(!Country:Notes, names_to = "year", values_to = "milex") %>% 
   mutate(across(year:milex, as.numeric),
-         milex = milex * 1000000) %>% 
+         milex = milex * 1000000) %>% # convert to raw score
   select(country = Country, year, milex)
 
 # Unified Democracy Scores
@@ -59,7 +59,7 @@ checks_raw <- import(here("data-raw", "DPI2020.dta")) %>%
 
 # Civil war 
 civil_war_raw <- import("https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-211-RData.zip") %>% 
-  filter(type_of_conflict %in% 3:4) %>% 
+  filter(type_of_conflict %in% 3:4) %>% # only include civil wars
   select(conflict_id, country = side_a, year)
 
 # Democracy
@@ -67,7 +67,7 @@ fh_raw <- download_fh()
 
 polity_raw <- download_polity_annual()
 
-# Federal
+# Federal - To be completed
 federal_countries_raw <- tibble(
   
   country = c("Argentina", "Australia", "Austria", "Belgium", 

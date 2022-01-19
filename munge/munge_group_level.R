@@ -8,10 +8,10 @@ library(DBI)
 source("src/src_group_level.R")
 
 # Scope
-group_scope <- dbConnect(RSQLite::SQLite(), "/Users/harrietgoers/Documents/github/SRDP/db_migration/data/portal-database-output.sqlite") %>% 
+group_scope <- dbConnect(RSQLite::SQLite(), "/Users/harrietgoers/Documents/github/SRDP/db_migration/data/portal-database-output.sqlite") %>% # to be migrated to web-based storage
   dbSendQuery("SELECT * FROM groups") %>% 
   dbFetch() %>% 
-  mutate(endyear = replace_na(endyear, 2020)) %>% 
+  mutate(endyear = replace_na(endyear, 2020)) %>% # restrict to SRDP year range
   pivot_longer(startyear:endyear, values_to = "year") %>% 
   group_by(kgcid = groupid, groupname, country) %>% 
   expand(year = full_seq(year, 1)) %>% 

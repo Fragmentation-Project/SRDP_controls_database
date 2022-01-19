@@ -1,4 +1,4 @@
-# This script sources group-level control data
+# This script sources group-level control data.
 
 library(tidyverse)
 library(rio)

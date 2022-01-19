@@ -31,4 +31,4 @@ For details of each of the variables included in the database, please see the co
 
 ## Future development
 
-It will be converted into a package shortly to provide R users with easy access to the data.
+This repo will be converted into a package shortly to provide R users with easy access to the data.
