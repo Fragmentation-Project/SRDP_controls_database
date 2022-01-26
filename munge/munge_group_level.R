@@ -68,10 +68,15 @@ size <- epr_size %>%
          size = round(size)) %>% 
   select(kgcid:year, size)
 
+# Religion
+religion <- religion_raw %>% 
+  select(kgcid, religion_1, religion_2)
+
 # Group-level data
 df <- group_scope %>% 
   left_join(relative_size) %>% 
-  left_join(size)
+  left_join(size) %>% 
+  left_join(religion)
 
 export(df, here("data", "group_level.csv"))
 
