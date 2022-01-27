@@ -2,6 +2,7 @@
 
 library(tidyverse)
 library(countrycode)
+library(lubridate)
 source("src/src_country_level.R")
 
 # SRDP scope
@@ -134,6 +135,17 @@ polity <- polity_raw %>%
   filter(country != "Sudan" | (country == "Sudan" & year == 2011 & polity_democracy == 1)) %>% 
   right_join(scope)
 
+# Elections
+elections <- elections_raw %>% 
+  mutate(year = year(date), 
+         type = str_to_lower(type),
+         event = 1) %>% 
+  group_by(country, year, type) %>%
+  summarise(event = sum(event)) %>% 
+  pivot_wider(names_from = type, values_from = event) %>% 
+  right_join(scope) %>% 
+  mutate(across(election:referendum, ~replace_na(.x, 0)))
+
 # Federalism
 federal_countries <- federal_countries_raw %>% 
   mutate(country = countrycode(country, "country.name", "country.name"),
@@ -154,7 +166,7 @@ df <- scope %>%
   left_join(uds) %>% 
   left_join(checks) %>% 
   left_join(fh) %>% 
-  left_join(polity)
+  left_join(polity) %>% 
+  left_join(elections)
 
-rio::export(df, here::here("data", "country_level.rds"))
 rio::export(df, here::here("data", "country_level.csv"))

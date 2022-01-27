@@ -21,6 +21,8 @@ For details of each of the variables included in the database, please see the co
 | Polity democracy, autocracy, and total scores               | PolityV                                                  |
 | Checks and balances                                         | Database of Political Institutions                       |
 | Civil war incidence, onset, and in previous year            | UCDP/PRIO Armed Conflict Dataset                         |
+| Elections                                                   | International Foundation for Electoral Systems           |
+| Referendum                                                  | International Foundation for Electoral Systems           |
 
 ### Group-level
 
@@ -28,6 +30,7 @@ For details of each of the variables included in the database, please see the co
 |---------------|------------------------|
 | Relative size | Ethnic Power Relations |
 | Size          | Ethnic Power Relations |
+| Religion      | Various                |
 
 ## Future development
 

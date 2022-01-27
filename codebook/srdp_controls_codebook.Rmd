@@ -26,16 +26,16 @@ library(here)
 
 ```{r datasets}
 # country level
-country_level <- import(here("data", "country_level.rds"))
+country_level <- import(here("data", "country_level.csv"))
 country_list <- country_level %>% distinct(country) %>% pull()
 
 # group level
-group_level <- import(here("data", "group_level.rds"))
+group_level <- import(here("data", "group_level.csv"))
 ```
 
 # Scope
 
-SRDP covers all countries with organizations actively pursuing self-determination claims from 1960 to 2003 included in the CIDCM Peace and Conflict report. This includes `r country_level %>% distinct(country) %>% nrow()` countries: `r country_level %>% distinct(country) %>% pull()`. 
+SRDP covers all countries with organizations actively pursuing self-determination claims from 1960 to 2003 included in the CIDCM Peace and Conflict report. This includes `r country_level %>% distinct(country) %>% nrow()` countries: `r country_level %>% distinct(country) %>% pull()`.
 
 # Country-level data
 
@@ -292,6 +292,34 @@ Year range: `r country_level %>% filter(!is.na(civil_war_prev_yr)) %>% summarise
 Countries with incomplete data: None.
 
 Update schedule: Annual
+
+## Elections
+
+**election**
+
+*The number of elections held in the country during the calendar year.*
+
+Source: [International Foundation for Electoral Systems](https://www.electionguide.org/)
+
+Year range: `r country_level %>% filter(!is.na(election)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(election)) %>% summarise(max(year))`
+
+Countries with incomplete data: None.
+
+Update schedule: Weekly.
+
+## Referendums
+
+**referendum**
+
+*The number of referendums held in the country during the calendar year.*
+
+Source: [International Foundation for Electoral Systems](https://www.electionguide.org/)
+
+Year range: `r country_level %>% filter(!is.na(referendum)) %>% summarise(min(year))` to `r country_level %>% filter(!is.na(referendum)) %>% summarise(max(year))`
+
+Countries with incomplete data: None.
+
+Update schedule: Weekly.
 
 # Group-level data
 
