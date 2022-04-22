@@ -6,12 +6,6 @@ library(here)
 library(countrycode)
 library(democracyData)
 
-# Country membership
-country_membership <- import("https://correlatesofwar.org/data-sets/state-system-membership/states2016/at_download/file") %>% 
-  mutate(country = countrycode(statenme, "country.name", "country.name"), # make names consistent across all data
-         endyear = if_else(endyear == 2016L, 2020L, endyear)) %>% # update end year to reflect current membership rather than end of data collection
-  select(country, styear, endyear)
-
 # SRDP membership
 srdp_country_membership <- import("/Users/harrietgoers/Documents/github/SRDP/db_migration/data-raw/SRDP_Mvmt_2019_release.dta") %>% 
   distinct(country) %>% 

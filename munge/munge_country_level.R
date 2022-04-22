@@ -7,39 +7,33 @@ source("src/src_country_level.R")
 
 # SRDP scope
 scope <- srdp_country_membership %>% 
-  mutate(country = countrycode(country, "country.name", "country.name")) %>% # make country names consistent across data
-  left_join(country_membership) %>% 
-  pivot_longer(c(styear, endyear), values_to = "year") %>% 
-  mutate(year = if_else(country == "Yugoslavia" & year == 2020L, 1992L, year)) %>% # fix error in end year
-  group_by(country) %>% 
+  mutate(country = countrycode(country, "country.name", "country.name"),
+         region = countrycode(country, "country.name", "region"), 
+         styear = 1960,
+         endyear = 2020) %>%  
+  pivot_longer(styear:endyear, values_to = "year") %>% 
+  group_by(country, region) %>% 
   expand(year = full_seq(year, 1)) %>% 
-  # filter to SRDP coverage (from 1960)
-  filter(year >= 1960) %>% # restrict to SRDP year range (1960 to 2020)
   ungroup()
-
-# Regions
-regions <- wbstats::wb_countries() %>% 
-  filter(region != "Aggregates") %>% 
-  select(country, region) %>% 
-  mutate(country = countrycode(country, "country.name", "country.name"))
 
 # Population
 population <- population_raw %>% 
-  right_join(scope)
+  right_join(scope) %>% 
+  ungroup()
 
 # GDP
 gdp <- gdp_raw %>% 
   mutate(country = countrycode(country, "country.name", "country.name")) %>% 
   select(country, year = date, gdp = value) %>% 
-  right_join(scope)
+  right_join(scope) %>% 
+  ungroup()
 
 # Military expenditure
 milex <- milex_raw %>%
-  # filter out regions and standardize names
   mutate(country = countrycode(country, "country.name", "country.name", custom_match = c("German DR" = "German Democratic Republic"))) %>% 
-  # account for separation of Russia and USSR in the source data
   drop_na(milex) %>% 
-  right_join(scope)
+  right_join(scope) %>% 
+  ungroup()
 
 # Unified Democracy Scores
 uds <- uds_raw %>% 
@@ -47,7 +41,8 @@ uds <- uds_raw %>%
                              country == "Yugoslavia (Serbia)" & year >= 1993 ~ "Serbia", 
                              TRUE ~ country),
          country = countrycode(country, "country.name", "country.name")) %>% 
-  right_join(scope)
+  right_join(scope) %>% 
+  ungroup()
 
 # Checks and balances
 checks <- checks_raw %>% 
@@ -62,7 +57,8 @@ checks <- checks_raw %>%
                                                 "P. N. Guinea" = "Papua New Guinea")),
          checks = na_if(checks, -999)) %>% 
   drop_na(checks) %>% 
-  right_join(scope)
+  right_join(scope) %>% 
+  ungroup()
 
 # Civil war 
 civil_war <- civil_war_raw %>%
@@ -77,7 +73,8 @@ civil_war <- civil_war_raw %>%
          year = as.numeric(year), 
          civil_war = 1) %>% 
   right_join(scope) %>% 
-  mutate(civil_war = replace_na(civil_war, 0))
+  mutate(civil_war = replace_na(civil_war, 0)) %>% 
+  ungroup()
 
 # Civil war onset
 civil_war_onset <- civil_war_raw %>% 
@@ -97,7 +94,8 @@ civil_war_onset <- civil_war_raw %>%
   summarise(civil_war_onset = if_else(sum(civil_war_onset) == 0, 0, 1)) %>% 
   ungroup() %>% 
   right_join(scope) %>% 
-  mutate(civil_war_onset = replace_na(civil_war_onset, 0))
+  mutate(civil_war_onset = replace_na(civil_war_onset, 0)) %>% 
+  ungroup()
 
 # Civil war in previous year
 civil_war_prev_yr <- civil_war_raw %>%
@@ -117,14 +115,16 @@ civil_war_prev_yr <- civil_war_raw %>%
   select(-civil_war) %>% 
   ungroup() %>% 
   right_join(scope) %>% 
-  mutate(civil_war_prev_yr = replace_na(civil_war_prev_yr, 0))
+  mutate(civil_war_prev_yr = replace_na(civil_war_prev_yr, 0)) %>% 
+  ungroup()
 
 # Freedom House
 fh <- fh_raw %>% 
   mutate(country = countrycode(fh_country, "country.name", "country.name", 
                                custom_match = c("Micronesia" = "Micronesia (Federated States of)"))) %>% 
   select(country, year, fh_political_rights = pr, fh_civil_liberties = cl, fh_status = status) %>% 
-  right_join(scope)
+  right_join(scope) %>% 
+  ungroup()
 
 # PolityV
 polity <- polity_raw %>% 
@@ -133,7 +133,8 @@ polity <- polity_raw %>%
   select(country, year, polity_democracy = democ, polity_autocracy = autoc, polity_total = polity) %>% 
   distinct(country, year, polity_democracy, polity_autocracy, polity_total) %>% 
   filter(country != "Sudan" | (country == "Sudan" & year == 2011 & polity_democracy == 1)) %>% 
-  right_join(scope)
+  right_join(scope) %>% 
+  ungroup()
 
 # Elections
 elections <- elections_raw %>% 
@@ -144,7 +145,8 @@ elections <- elections_raw %>%
   summarise(event = sum(event)) %>% 
   pivot_wider(names_from = type, values_from = event) %>% 
   right_join(scope) %>% 
-  mutate(across(election:referendum, ~replace_na(.x, 0)))
+  mutate(across(election:referendum, ~replace_na(.x, 0))) %>% 
+  ungroup()
 
 # Federalism
 federal_countries <- federal_countries_raw %>% 
@@ -152,11 +154,11 @@ federal_countries <- federal_countries_raw %>%
          federal = 1) %>% 
   distinct(country, federal) %>% 
   right_join(scope) %>% 
-  mutate(federal = replace_na(federal, 0))
+  mutate(federal = replace_na(federal, 0)) %>% 
+  ungroup()
   
 # Compile country-level data
 df <- scope %>% 
-  left_join(regions) %>% 
   left_join(civil_war) %>% 
   left_join(civil_war_onset) %>% 
   left_join(civil_war_prev_yr) %>% 

@@ -9,3 +9,4 @@ full_df <- import(here("data", "group_level.csv")) %>%
   arrange(kgcid, year)
 
 export(full_df, here("data", "full_dataset.csv"))
+%>% 

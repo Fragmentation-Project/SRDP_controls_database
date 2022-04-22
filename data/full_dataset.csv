@@ -249,9 +249,9 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 105,Indigenous Peoples,Canada,2015,0.04,1765307,Christian,Traditional,North America,0,0,0,17937641894.7407,36026668,1556508816217.14,,4,1,1,F,10,0,10,1,0
 105,Indigenous Peoples,Canada,2016,0.04,1782764,Christian,Traditional,North America,0,0,0,17782775543.0736,36382942,1527994741907.43,,4,1,1,F,10,0,10,0,0
 105,Indigenous Peoples,Canada,2017,0.04,1799872,Christian,Traditional,North America,0,0,0,22269696323.3229,36732091,1649265644244.09,,4,1,1,F,10,0,10,0,0
-105,Indigenous Peoples,Canada,2018,0.04,1816653,Christian,Traditional,North America,0,0,0,22729327580.3404,37074558,1721853332869.63,,4,1,1,F,10,0,10,0,0
-105,Indigenous Peoples,Canada,2019,0.04,1833141,Christian,Traditional,North America,0,0,0,22204408440.0904,37411038,1741576393905.98,,4,1,1,F,,,,1,0
-105,Indigenous Peoples,Canada,2020,0.04,1849366,Christian,Traditional,North America,0,0,0,22754847129.0082,37742157,1644037286481.26,,4,1,1,F,,,,0,0
+105,Indigenous Peoples,Canada,2018,0.04,1816653,Christian,Traditional,North America,0,0,0,22729327580.3404,37074558,1725329192783.02,,4,1,1,F,10,0,10,0,0
+105,Indigenous Peoples,Canada,2019,0.04,1833141,Christian,Traditional,North America,0,0,0,22204408440.0904,37411038,1742015045482.31,,4,1,1,F,,,,1,0
+105,Indigenous Peoples,Canada,2020,0.04,1849366,Christian,Traditional,North America,0,0,0,22754847129.0082,37742157,1645423407568.36,,4,1,1,F,,,,0,0
 106,Tibetans,China,1979,0,2612757,Buddhist,"",East Asia & Pacific,0,0,0,,986132214,178280594413.043,-0.875830814388016,1,6,6,NF,0,7,-7,0,0
 106,Tibetans,China,1980,0,2612757,Buddhist,"",East Asia & Pacific,0,0,0,,1000089228,191149211575,-0.983870594799201,1,6,6,NF,0,7,-7,0,0
 106,Tibetans,China,1981,0,2612757,Buddhist,"",East Asia & Pacific,0,0,0,,1014022211,195866382432.54,-0.878761831396772,1,,,"",0,7,-7,0,0
@@ -1271,7 +1271,7 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 135,Indigenous Peoples,United States,2017,,,Traditional,Christian,North America,1,0,1,646752927000,325084758,19542979183000,,4,2,1,F,8,0,8,0,0
 135,Indigenous Peoples,United States,2018,,,Traditional,Christian,North America,0,0,0,682491400000,327096263,20611860934000,,4,2,1,F,8,0,8,2,0
 135,Indigenous Peoples,United States,2019,,,Traditional,Christian,North America,1,0,1,734344100000,329064917,21433224697000,,5,2,1,F,7,0,7,0,0
-135,Indigenous Peoples,United States,2020,,,Traditional,Christian,North America,0,0,0,778232200000,331002647,2.0893746e+13,,5,2,2,F,5,0,5,3,0
+135,Indigenous Peoples,United States,2020,,,Traditional,Christian,North America,0,0,0,778232200000,331002647,2.095303e+13,,5,2,2,F,5,0,5,3,0
 136,Montagnards,Vietnam,1964,0.02,801924,Christian,"",East Asia & Pacific,0,0,0,,36780001,,-1.00394753528082,,,,"",0,8,-8,0,0
 136,Montagnards,Vietnam,1965,0.02,801924,Christian,"",East Asia & Pacific,0,0,0,,37858947,,-0.914472162658163,,,,"",0,8,-8,0,0
 136,Montagnards,Vietnam,1966,0.02,801924,Christian,"",East Asia & Pacific,0,0,0,,38958046,,-1.0092270597626,,,,"",0,8,-8,0,0
@@ -1322,16 +1322,16 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 136,Montagnards,Vietnam,2011,0.01,801924,Christian,"",East Asia & Pacific,0,0,0,2686520590.1569,88871384,135539438559.709,-0.86749708115017,1,7,5,NF,0,7,-7,1,0
 136,Montagnards,Vietnam,2012,0.01,801924,Christian,"",East Asia & Pacific,0,0,0,3360860380.25735,89801926,155820001920.492,-0.862252462200602,1,7,5,NF,0,7,-7,0,0
 136,Montagnards,Vietnam,2013,0.01,801924,Christian,"",East Asia & Pacific,0,0,0,3727249276.27619,90752593,171222025117.381,,1,7,5,NF,0,7,-7,0,0
-137,Kosovar Albanians,Yugoslavia,1990,,,Sunni Muslim,Christian,"",0,0,0,,,,-0.501955794827205,1,5,4,PF,0,5,-5,0,0
-137,Kosovar Albanians,Yugoslavia,1991,,,Sunni Muslim,Christian,"",1,1,0,,,,-0.386222260302091,,6,5,NF,0,5,-5,0,0
-137,Kosovar Albanians,Yugoslavia,1992,,,Sunni Muslim,Christian,"",1,0,1,,,,-0.401710549557942,,6,5,PF,0,5,-5,0,0
-137,Kosovar Albanians,Yugoslavia,1993,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-137,Kosovar Albanians,Yugoslavia,1994,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-137,Kosovar Albanians,Yugoslavia,1995,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-137,Kosovar Albanians,Yugoslavia,1996,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-137,Kosovar Albanians,Yugoslavia,1997,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-137,Kosovar Albanians,Yugoslavia,1998,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-137,Kosovar Albanians,Yugoslavia,1999,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
+137,Kosovar Albanians,Yugoslavia,1990,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,-0.501955794827205,1,5,4,PF,0,5,-5,0,0
+137,Kosovar Albanians,Yugoslavia,1991,,,Sunni Muslim,Christian,Europe & Central Asia,1,1,0,,,,-0.386222260302091,,6,5,NF,0,5,-5,0,0
+137,Kosovar Albanians,Yugoslavia,1992,,,Sunni Muslim,Christian,Europe & Central Asia,1,0,1,,,,-0.401710549557942,,6,5,PF,0,5,-5,0,0
+137,Kosovar Albanians,Yugoslavia,1993,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+137,Kosovar Albanians,Yugoslavia,1994,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+137,Kosovar Albanians,Yugoslavia,1995,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+137,Kosovar Albanians,Yugoslavia,1996,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+137,Kosovar Albanians,Yugoslavia,1997,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,6,-6,0,0
+137,Kosovar Albanians,Yugoslavia,1998,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,3,6,6,NF,0,6,-6,0,0
+137,Kosovar Albanians,Yugoslavia,1999,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,3,5,5,PF,0,6,-6,0,0
 138,Lozi,Zambia,1992,0.07,676108,Traditional,"",Sub-Saharan Africa,0,0,0,97756279.9772376,8451346,3181921787.7095,0.200965955136892,3,2,3,F,6,0,6,0,0
 138,Lozi,Zambia,1993,0.07,692519,Traditional,"",Sub-Saharan Africa,0,0,0,51128294.4940289,8656484,3273237853.35689,0.00154423738275774,3,3,4,PF,6,0,6,0,0
 138,Lozi,Zambia,1994,0.07,709580,Traditional,"",Sub-Saharan Africa,0,0,0,62869469.9949654,8869745,3656647744.24858,0.00368802861627467,3,3,4,PF,6,0,6,0,0
@@ -1557,9 +1557,9 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 202,Quebecois,Canada,2015,0.18,8286134,Catholic,"",North America,0,0,0,17937641894.7407,36026668,1556508816217.14,,4,1,1,F,10,0,10,1,0
 202,Quebecois,Canada,2016,0.18,8368077,Catholic,"",North America,0,0,0,17782775543.0736,36382942,1527994741907.43,,4,1,1,F,10,0,10,0,0
 202,Quebecois,Canada,2017,0.17,8448381,Catholic,"",North America,0,0,0,22269696323.3229,36732091,1649265644244.09,,4,1,1,F,10,0,10,0,0
-202,Quebecois,Canada,2018,0.17,8527148,Catholic,"",North America,0,0,0,22729327580.3404,37074558,1721853332869.63,,4,1,1,F,10,0,10,0,0
-202,Quebecois,Canada,2019,0.17,8604539,Catholic,"",North America,0,0,0,22204408440.0904,37411038,1741576393905.98,,4,1,1,F,,,,1,0
-202,Quebecois,Canada,2020,0.17,8680696,Catholic,"",North America,0,0,0,22754847129.0082,37742157,1644037286481.26,,4,1,1,F,,,,0,0
+202,Quebecois,Canada,2018,0.17,8527148,Catholic,"",North America,0,0,0,22729327580.3404,37074558,1725329192783.02,,4,1,1,F,10,0,10,0,0
+202,Quebecois,Canada,2019,0.17,8604539,Catholic,"",North America,0,0,0,22204408440.0904,37411038,1742015045482.31,,4,1,1,F,,,,1,0
+202,Quebecois,Canada,2020,0.17,8680696,Catholic,"",North America,0,0,0,22754847129.0082,37742157,1645423407568.36,,4,1,1,F,,,,0,0
 203,Uighers,China,1990,0.01,9928476,Sunni Muslim,"",East Asia & Pacific,0,0,0,9926349250.81692,1176883681,360857912565.966,-1.18578909460246,1,7,7,NF,0,7,-7,0,0
 203,Uighers,China,1991,0.01,9928476,Sunni Muslim,"",East Asia & Pacific,0,0,0,9802375366.07313,1192897277,383373318083.624,-1.17869154298084,1,7,7,NF,0,7,-7,0,0
 203,Uighers,China,1992,0.01,9928476,Sunni Muslim,"",East Asia & Pacific,0,0,0,12244267842.2149,1206711243,426915712715.856,-1.18096736863532,1,7,7,NF,0,7,-7,0,0
@@ -2661,7 +2661,7 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 230,Catholics,United Kingdom,2017,0.01,800730,Catholic,"",Europe & Central Asia,0,0,0,51633539217.1638,66727463,2699016715111.39,,4,1,1,F,8,0,8,2,0
 230,Catholics,United Kingdom,2018,0.01,805700,Catholic,"",Europe & Central Asia,0,0,0,55680228214.9866,67141678,2900791442554.06,,4,1,1,F,8,0,8,0,0
 230,Catholics,United Kingdom,2019,0.01,810362,Catholic,"",Europe & Central Asia,0,0,0,56856133066.0077,67530161,2878673912414.44,,4,1,1,F,,,,1,0
-230,Catholics,United Kingdom,2020,0.01,814632,Catholic,"",Europe & Central Asia,0,0,0,59238462250,67886004,2764197653965.05,,3,1,1,F,,,,0,0
+230,Catholics,United Kingdom,2020,0.01,814632,Catholic,"",Europe & Central Asia,0,0,0,59238462250,67886004,2759804061837.07,,3,1,1,F,,,,0,0
 231,Native Hawaiians,United States,1978,,,Traditional,"",North America,0,0,0,113382063749.093,225223307,2.351599e+12,1.21403903367192,4,1,1,F,10,0,10,0,0
 231,Native Hawaiians,United States,1979,,,Traditional,"",North America,0,0,0,126879927116.756,227339321,2.627333e+12,1.05570747897953,4,1,1,F,10,0,10,0,0
 231,Native Hawaiians,United States,1980,,,Traditional,"",North America,0,0,0,143688354872.676,229476360,2.857307e+12,1.14799778365277,4,1,1,F,10,0,10,0,0
@@ -2704,41 +2704,41 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 231,Native Hawaiians,United States,2017,,,Traditional,"",North America,1,0,1,646752927000,325084758,19542979183000,,4,2,1,F,8,0,8,0,0
 231,Native Hawaiians,United States,2018,,,Traditional,"",North America,0,0,0,682491400000,327096263,20611860934000,,4,2,1,F,8,0,8,2,0
 231,Native Hawaiians,United States,2019,,,Traditional,"",North America,1,0,1,734344100000,329064917,21433224697000,,5,2,1,F,7,0,7,0,0
-231,Native Hawaiians,United States,2020,,,Traditional,"",North America,0,0,0,778232200000,331002647,2.0893746e+13,,5,2,2,F,5,0,5,3,0
-232,Hungarians,Yugoslavia,1990,,247509,Catholic,"","",0,0,0,,,,-0.501955794827205,1,5,4,PF,0,5,-5,0,0
-232,Hungarians,Yugoslavia,1991,,247509,Catholic,"","",1,1,0,,,,-0.386222260302091,,6,5,NF,0,5,-5,0,0
-232,Hungarians,Yugoslavia,1992,,247509,Catholic,"","",1,0,1,,,,-0.401710549557942,,6,5,PF,0,5,-5,0,0
-232,Hungarians,Yugoslavia,1993,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,1994,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,1995,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,1996,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,1997,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,1998,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,1999,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2000,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2001,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2002,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2003,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2004,,248244,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2005,,247573,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2006,,246711,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2007,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2008,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2009,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2010,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2011,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2012,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2013,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2014,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2015,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2016,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2017,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2018,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2019,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-232,Hungarians,Yugoslavia,2020,,247509,Catholic,"",,,,,,,,,,,,,,,,,
-233,Slovenes,Yugoslavia,1989,,,Catholic,"","",0,0,0,,,,-0.504236111705851,1,5,4,PF,1,6,-5,0,0
-233,Slovenes,Yugoslavia,1990,,,Catholic,"","",0,0,0,,,,-0.501955794827205,1,5,4,PF,0,5,-5,0,0
-233,Slovenes,Yugoslavia,1991,,,Catholic,"","",1,1,0,,,,-0.386222260302091,,6,5,NF,0,5,-5,0,0
+231,Native Hawaiians,United States,2020,,,Traditional,"",North America,0,0,0,778232200000,331002647,2.095303e+13,,5,2,2,F,5,0,5,3,0
+232,Hungarians,Yugoslavia,1990,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.501955794827205,1,5,4,PF,0,5,-5,0,0
+232,Hungarians,Yugoslavia,1991,,247509,Catholic,"",Europe & Central Asia,1,1,0,,,,-0.386222260302091,,6,5,NF,0,5,-5,0,0
+232,Hungarians,Yugoslavia,1992,,247509,Catholic,"",Europe & Central Asia,1,0,1,,,,-0.401710549557942,,6,5,PF,0,5,-5,0,0
+232,Hungarians,Yugoslavia,1993,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+232,Hungarians,Yugoslavia,1994,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+232,Hungarians,Yugoslavia,1995,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+232,Hungarians,Yugoslavia,1996,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+232,Hungarians,Yugoslavia,1997,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,6,-6,0,0
+232,Hungarians,Yugoslavia,1998,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,3,6,6,NF,0,6,-6,0,0
+232,Hungarians,Yugoslavia,1999,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,3,5,5,PF,0,6,-6,0,0
+232,Hungarians,Yugoslavia,2000,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,3,4,4,PF,7,0,7,0,0
+232,Hungarians,Yugoslavia,2001,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,4,3,3,PF,7,0,7,0,0
+232,Hungarians,Yugoslavia,2002,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,3,2,F,7,0,7,0,0
+232,Hungarians,Yugoslavia,2003,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2004,,248244,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2005,,247573,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2006,,246711,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2007,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2008,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2009,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2010,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2011,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2012,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2013,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2014,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2015,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2016,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2017,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2018,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2019,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+232,Hungarians,Yugoslavia,2020,,247509,Catholic,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+233,Slovenes,Yugoslavia,1989,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.504236111705851,1,5,4,PF,1,6,-5,0,0
+233,Slovenes,Yugoslavia,1990,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.501955794827205,1,5,4,PF,0,5,-5,0,0
+233,Slovenes,Yugoslavia,1991,,,Catholic,"",Europe & Central Asia,1,1,0,,,,-0.386222260302091,,6,5,NF,0,5,-5,0,0
 234,Ndebele,Zimbabwe,1965,0.37,1636216,Christian,Traditional,Sub-Saharan Africa,0,0,0,15600000,4471178,1311435800,,,,,"",,,,0,0
 234,Ndebele,Zimbabwe,1966,0.35,1636216,Christian,Traditional,Sub-Saharan Africa,0,0,0,16950000,4623340,1281749500,,,,,"",,,,0,0
 234,Ndebele,Zimbabwe,1967,0.34,1636216,Christian,Traditional,Sub-Saharan Africa,1,1,0,1.9e+07,4779825,1397002000,-0.649758679900786,,,,"",,,,0,0
@@ -2970,30 +2970,30 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 305,Indigenous Peoples,Chile,1994,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,1466048831.80184,14166346,57008425295.8256,0.645992431523142,4,2,2,F,8,0,8,0,0
 305,Indigenous Peoples,Chile,1995,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,1827997368.77257,14380864,73447063319.3034,0.640604416675736,4,2,2,F,8,0,8,0,0
 305,Indigenous Peoples,Chile,1996,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,1904105834.32581,14587367,78039572221.6024,0.643837168379729,4,2,2,F,8,0,8,0,0
-305,Indigenous Peoples,Chile,1997,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,2120702607.94906,14786227,84952360922.4679,0.646805485171023,4,2,2,F,8,0,8,0,0
-305,Indigenous Peoples,Chile,1998,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,2112373122.91435,14977736,81577430181.4074,0.605801111870497,4,3,2,F,8,0,8,0,0
-305,Indigenous Peoples,Chile,1999,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,2043134811.5186,15162801,75173794497.0321,0.628137426363514,4,2,2,F,8,0,8,1,0
-305,Indigenous Peoples,Chile,2000,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,2103460609.68852,15342350,77860932151.8471,0.743419030068718,4,2,2,F,9,0,9,1,0
-305,Indigenous Peoples,Chile,2001,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,1893098223.76358,15516112,70979923960.3742,0.672780403736797,4,2,2,F,9,0,9,2,0
-305,Indigenous Peoples,Chile,2002,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,1779553137.6599,15684413,69736811435.1032,0.735641705517511,2,2,1,F,9,0,9,0,0
-305,Indigenous Peoples,Chile,2003,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,2067983997.63957,15849649,75643459839.6008,0.814682996684905,2,1,1,F,9,0,9,0,0
-305,Indigenous Peoples,Chile,2004,0.01,158356,Catholic,Traditional,Latin America & Caribbean,0,0,0,2687320865.78325,16014972,99210392857.6116,0.813295854220189,2,1,1,F,9,0,9,0,0
-305,Indigenous Peoples,Chile,2005,0.01,159950,Catholic,Traditional,Latin America & Caribbean,0,0,0,3100391590.8019,16182713,122964812046.073,0.817191776896994,2,1,1,F,9,0,9,3,0
-305,Indigenous Peoples,Chile,2006,0.01,161508,Catholic,Traditional,Latin America & Caribbean,0,0,0,3855358068.9265,16354507,154788024805.808,1.12924414749657,2,1,1,F,10,0,10,1,0
-305,Indigenous Peoples,Chile,2007,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,4022478103.75452,16530201,173605968179.255,1.18405678888031,2,1,1,F,10,0,10,0,0
-305,Indigenous Peoples,Chile,2008,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,4641877575.55109,16708255,179638496278.574,1.13099022869052,2,1,1,F,10,0,10,0,0
-305,Indigenous Peoples,Chile,2009,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,3902221588.27515,16886184,172389498444.62,1.18029947009997,2,1,1,F,10,0,10,3,0
-305,Indigenous Peoples,Chile,2010,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,4894081125.09775,17062531,218537551220.071,1.18487650806102,5,1,1,F,10,0,10,1,0
-305,Indigenous Peoples,Chile,2011,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5686752069.60146,17233584,252251992029.442,1.25807851318821,4,1,1,F,10,0,10,0,0
-305,Indigenous Peoples,Chile,2012,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5466101782.01784,17400359,267122320056.702,1.261314752133,4,1,1,F,10,0,10,0,0
-305,Indigenous Peoples,Chile,2013,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5529879480.60969,17571511,278384332694.359,,4,1,1,F,10,0,10,4,0
-305,Indigenous Peoples,Chile,2014,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5102777422.11734,17758969,260541637327.864,,2,1,1,F,10,0,10,0,0
-305,Indigenous Peoples,Chile,2015,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,4630772773.72175,17969356,243919079437.373,,2,1,1,F,10,0,10,0,0
-305,Indigenous Peoples,Chile,2016,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,4796010962.08952,18209072,250440149690.889,,2,1,1,F,10,0,10,0,0
-305,Indigenous Peoples,Chile,2017,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5370018134.87068,18470435,277034675515.671,,2,1,1,F,10,0,10,3,0
-305,Indigenous Peoples,Chile,2018,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5545831932.77856,18729166,297571693064.212,,5,1,1,F,10,0,10,0,0
-305,Indigenous Peoples,Chile,2019,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5182156528.66016,18952035,279385487344.526,,5,1,2,F,,,,0,0
-305,Indigenous Peoples,Chile,2020,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,4600739697.2954,19116209,252940023046.011,,5,1,1,F,,,,0,1
+305,Indigenous Peoples,Chile,1997,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,2120702607.94906,14786227,84952360922.4958,0.646805485171023,4,2,2,F,8,0,8,0,0
+305,Indigenous Peoples,Chile,1998,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,2112373122.91435,14977736,81577430181.4602,0.605801111870497,4,3,2,F,8,0,8,0,0
+305,Indigenous Peoples,Chile,1999,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,2043134811.5186,15162801,75173794497.0494,0.628137426363514,4,2,2,F,8,0,8,1,0
+305,Indigenous Peoples,Chile,2000,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,2103460609.68852,15342350,77860932151.9302,0.743419030068718,4,2,2,F,9,0,9,1,0
+305,Indigenous Peoples,Chile,2001,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,1893098223.76358,15516112,70979923960.3422,0.672780403736797,4,2,2,F,9,0,9,2,0
+305,Indigenous Peoples,Chile,2002,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,1779553137.6599,15684413,69736811435.1319,0.735641705517511,2,2,1,F,9,0,9,0,0
+305,Indigenous Peoples,Chile,2003,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,2067983997.63957,15849649,75643459839.5605,0.814682996684905,2,1,1,F,9,0,9,0,0
+305,Indigenous Peoples,Chile,2004,0.01,158356,Catholic,Traditional,Latin America & Caribbean,0,0,0,2687320865.78325,16014972,99210392857.6283,0.813295854220189,2,1,1,F,9,0,9,0,0
+305,Indigenous Peoples,Chile,2005,0.01,159950,Catholic,Traditional,Latin America & Caribbean,0,0,0,3100391590.8019,16182713,122964812046.139,0.817191776896994,2,1,1,F,9,0,9,3,0
+305,Indigenous Peoples,Chile,2006,0.01,161508,Catholic,Traditional,Latin America & Caribbean,0,0,0,3855358068.9265,16354507,154788024805.865,1.12924414749657,2,1,1,F,10,0,10,1,0
+305,Indigenous Peoples,Chile,2007,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,4022478103.75452,16530201,173605968179.267,1.18405678888031,2,1,1,F,10,0,10,0,0
+305,Indigenous Peoples,Chile,2008,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,4641877575.55109,16708255,179638496278.497,1.13099022869052,2,1,1,F,10,0,10,0,0
+305,Indigenous Peoples,Chile,2009,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,3902221588.27515,16886184,172389498444.68,1.18029947009997,2,1,1,F,10,0,10,3,0
+305,Indigenous Peoples,Chile,2010,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,4894081125.09775,17062531,218537551220.123,1.18487650806102,5,1,1,F,10,0,10,1,0
+305,Indigenous Peoples,Chile,2011,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5686752069.60146,17233584,252251992029.518,1.25807851318821,4,1,1,F,10,0,10,0,0
+305,Indigenous Peoples,Chile,2012,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5466101782.01784,17400359,267122320056.772,1.261314752133,4,1,1,F,10,0,10,0,0
+305,Indigenous Peoples,Chile,2013,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5529879480.60969,17571511,278384332694.3,,4,1,1,F,10,0,10,4,0
+305,Indigenous Peoples,Chile,2014,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5102777422.11734,17758969,260541637327.855,,2,1,1,F,10,0,10,0,0
+305,Indigenous Peoples,Chile,2015,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,4630772773.72175,17969356,243919079437.422,,2,1,1,F,10,0,10,0,0
+305,Indigenous Peoples,Chile,2016,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,4796010962.08952,18209072,250440149690.846,,2,1,1,F,10,0,10,0,0
+305,Indigenous Peoples,Chile,2017,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5370018134.87068,18470435,277034675515.684,,2,1,1,F,10,0,10,3,0
+305,Indigenous Peoples,Chile,2018,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5545831932.77856,18729166,297571693064.193,,5,1,1,F,10,0,10,0,0
+305,Indigenous Peoples,Chile,2019,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,5182156528.66016,18952035,279385487344.492,,5,1,2,F,,,,0,0
+305,Indigenous Peoples,Chile,2020,0.01,159938,Catholic,Traditional,Latin America & Caribbean,0,0,0,4600739697.2954,19116209,252940023046.007,,5,1,1,F,,,,0,1
 306,Bakongo,Congo-Kinshasa,1960,,,Christian,Traditional,,,,,,,,,,,,,,,,,
 306,Bakongo,Congo-Kinshasa,1961,,,Christian,Traditional,,,,,,,,,,,,,,,,,
 306,Bakongo,Congo-Kinshasa,1962,,,Christian,Traditional,,,,,,,,,,,,,,,,,
@@ -3055,7 +3055,7 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 306,Bakongo,Congo-Kinshasa,2018,,,Christian,Traditional,,,,,,,,,,,,,,,,,
 306,Bakongo,Congo-Kinshasa,2019,,,Christian,Traditional,,,,,,,,,,,,,,,,,
 306,Bakongo,Congo-Kinshasa,2020,,,Christian,Traditional,,,,,,,,,,,,,,,,,
-307,Serbs,Croatia,1991,,202313,Christian,"",,,,,,,,,,,,,,,,,
+307,Serbs,Croatia,1991,,202313,Christian,"",Europe & Central Asia,0,0,0,,4760003,,0.0516203061795415,,3,4,PF,1,4,-3,0,0
 307,Serbs,Croatia,1992,0.04,577410,Christian,"",Europe & Central Asia,1,1,0,782003661.25075,4732866,,0.127255539489724,,4,4,PF,1,4,-3,0,0
 307,Serbs,Croatia,1993,0.04,573100,Christian,"",Europe & Central Asia,1,0,1,1168936758.72763,4697537,,0.130010395565927,2,4,4,PF,1,4,-3,0,0
 307,Serbs,Croatia,1994,0.04,568252,Christian,"",Europe & Central Asia,0,0,0,1625222365.41786,4657800,,0.127824757335682,2,4,4,PF,1,4,-3,0,0
@@ -3658,8 +3658,8 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 323,Saami,Norway,2016,,,Christian,Traditional,Europe & Central Asia,0,0,0,5997385047.52171,5250950,368827142857.143,,4,1,1,F,10,0,10,0,0
 323,Saami,Norway,2017,,,Christian,Traditional,Europe & Central Asia,0,0,0,6853260032.98516,5296324,398393955268.99,,4,1,1,F,10,0,10,1,0
 323,Saami,Norway,2018,,,Christian,Traditional,Europe & Central Asia,0,0,0,7541055169.17745,5337960,436999692591.454,,5,1,1,F,10,0,10,0,0
-323,Saami,Norway,2019,,,Christian,Traditional,Europe & Central Asia,0,0,0,7520413965.6545,5378859,4.0551e+11,,5,1,1,F,,,,0,0
-323,Saami,Norway,2020,,,Christian,Traditional,Europe & Central Asia,0,0,0,7112538486.03886,5421242,362522347110.364,,5,1,1,F,,,,0,0
+323,Saami,Norway,2019,,,Christian,Traditional,Europe & Central Asia,0,0,0,7520413965.6545,5378859,404941363636.364,,5,1,1,F,,,,0,0
+323,Saami,Norway,2020,,,Christian,Traditional,Europe & Central Asia,0,0,0,7112538486.03886,5421242,362198318435.26,,5,1,1,F,,,,0,0
 324,Lowland Indigenous Peoples,Peru,1980,0.02,364645,Christian,Traditional,Latin America & Caribbean,0,0,0,948572813.349258,17547612,18134029179.6393,0.395789700176151,1,2,3,F,7,0,7,0,0
 324,Lowland Indigenous Peoples,Peru,1981,0.02,364645,Christian,Traditional,Latin America & Caribbean,0,0,0,994511245.080721,17985398,21649137620.3055,0.538675397788787,4,,,"",7,0,7,0,0
 324,Lowland Indigenous Peoples,Peru,1982,0.02,364645,Christian,Traditional,Latin America & Caribbean,1,1,1,1268695336.79202,18426420,21793496819.3379,0.542178475831936,4,2,3,F,7,0,7,0,0
@@ -3756,7 +3756,7 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 326,Kumyks,Russia,2006,0,412002,Sunni Muslim,"",Europe & Central Asia,1,0,1,34517781618.918,143403258,989930542278.695,0.016463687854779,4,6,5,NF,6,0,6,0,0
 326,Kumyks,Russia,2007,0,414074,Sunni Muslim,"",Europe & Central Asia,1,1,1,43534994996.2472,143266207,1299705764823.62,-0.147587095662092,4,6,5,NF,5,1,4,1,0
 326,Kumyks,Russia,2008,0,414074,Sunni Muslim,"",Europe & Central Asia,1,0,1,56183785393.2539,143248764,1660846387624.78,-0.118520159054345,4,6,5,NF,5,1,4,1,0
-327,Hungarians,Slovakia,1992,,575734,Catholic,"",,,,,,,,,,,,,,,,,
+327,Hungarians,Slovakia,1992,,575734,Catholic,"",Europe & Central Asia,0,0,0,,5329029,15495514296.8042,,,,,"",,,,0,0
 327,Hungarians,Slovakia,1993,0.11,540068,Catholic,"",Europe & Central Asia,0,0,0,266899036.578679,5347212,16520676973.5301,0.392880915729872,4,3,4,PF,7,0,7,0,0
 327,Hungarians,Slovakia,1994,0.11,541652,Catholic,"",Europe & Central Asia,0,0,0,299993419.135274,5362894,20162936291.375,0.515244159843455,4,2,3,F,7,0,7,0,0
 327,Hungarians,Slovakia,1995,0.11,542922,Catholic,"",Europe & Central Asia,0,0,0,629622682.638738,5375470,25840146405.2288,0.517902289670165,5,2,3,F,7,0,7,0,0
@@ -4063,7 +4063,7 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 333,Cornish,United Kingdom,2017,,,Christian,"",Europe & Central Asia,0,0,0,51633539217.1638,66727463,2699016715111.39,,4,1,1,F,8,0,8,2,0
 333,Cornish,United Kingdom,2018,,,Christian,"",Europe & Central Asia,0,0,0,55680228214.9866,67141678,2900791442554.06,,4,1,1,F,8,0,8,0,0
 333,Cornish,United Kingdom,2019,,,Christian,"",Europe & Central Asia,0,0,0,56856133066.0077,67530161,2878673912414.44,,4,1,1,F,,,,1,0
-333,Cornish,United Kingdom,2020,,,Christian,"",Europe & Central Asia,0,0,0,59238462250,67886004,2764197653965.05,,3,1,1,F,,,,0,0
+333,Cornish,United Kingdom,2020,,,Christian,"",Europe & Central Asia,0,0,0,59238462250,67886004,2759804061837.07,,3,1,1,F,,,,0,0
 334,Puerto Ricans,United States,1960,,,Catholic,Christian,North America,0,0,0,47346552670.2126,186720570,5.433e+11,1.08416003011907,,,,"",9,0,9,0,0
 334,Puerto Ricans,United States,1961,,,Catholic,Christian,North America,0,0,0,49879770605.0578,189569850,5.633e+11,1.04396781119453,,,,"",9,0,9,0,0
 334,Puerto Ricans,United States,1962,,,Catholic,Christian,North America,0,0,0,54650942605.0773,192313747,6.051e+11,1.27185917597481,,,,"",9,0,9,0,0
@@ -4124,60 +4124,60 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 334,Puerto Ricans,United States,2017,,,Catholic,Christian,North America,1,0,1,646752927000,325084758,19542979183000,,4,2,1,F,8,0,8,0,0
 334,Puerto Ricans,United States,2018,,,Catholic,Christian,North America,0,0,0,682491400000,327096263,20611860934000,,4,2,1,F,8,0,8,2,0
 334,Puerto Ricans,United States,2019,,,Catholic,Christian,North America,1,0,1,734344100000,329064917,21433224697000,,5,2,1,F,7,0,7,0,0
-334,Puerto Ricans,United States,2020,,,Catholic,Christian,North America,0,0,0,778232200000,331002647,2.0893746e+13,,5,2,2,F,5,0,5,3,0
-335,Albanians,Yugoslavia,1998,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,1999,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2000,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2001,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2002,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2003,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2004,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2005,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2006,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2007,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2008,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2009,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2010,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2011,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2012,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2013,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2014,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2015,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2016,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2017,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2018,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2019,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-335,Albanians,Yugoslavia,2020,,,Sunni Muslim,Christian,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,1991,,,Christian,Sunni Muslim,"",1,1,0,,,,-0.386222260302091,,6,5,NF,0,5,-5,0,0
-336,Montenegrins,Yugoslavia,1992,,,Christian,Sunni Muslim,"",1,0,1,,,,-0.401710549557942,,6,5,PF,0,5,-5,0,0
-336,Montenegrins,Yugoslavia,1993,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,1994,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,1995,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,1996,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,1997,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,1998,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,1999,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2000,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2001,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2002,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2003,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2004,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2005,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2006,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2007,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2008,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2009,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2010,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2011,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2012,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2013,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2014,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2015,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2016,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2017,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2018,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2019,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
-336,Montenegrins,Yugoslavia,2020,,,Christian,Sunni Muslim,,,,,,,,,,,,,,,,,
+334,Puerto Ricans,United States,2020,,,Catholic,Christian,North America,0,0,0,778232200000,331002647,2.095303e+13,,5,2,2,F,5,0,5,3,0
+335,Albanians,Yugoslavia,1998,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,3,6,6,NF,0,6,-6,0,0
+335,Albanians,Yugoslavia,1999,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,3,5,5,PF,0,6,-6,0,0
+335,Albanians,Yugoslavia,2000,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,3,4,4,PF,7,0,7,0,0
+335,Albanians,Yugoslavia,2001,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,4,3,3,PF,7,0,7,0,0
+335,Albanians,Yugoslavia,2002,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,3,2,F,7,0,7,0,0
+335,Albanians,Yugoslavia,2003,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2004,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2005,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2006,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2007,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2008,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2009,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2010,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2011,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2012,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2013,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2014,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2015,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2016,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2017,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2018,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2019,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+335,Albanians,Yugoslavia,2020,,,Sunni Muslim,Christian,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,1991,,,Christian,Sunni Muslim,Europe & Central Asia,1,1,0,,,,-0.386222260302091,,6,5,NF,0,5,-5,0,0
+336,Montenegrins,Yugoslavia,1992,,,Christian,Sunni Muslim,Europe & Central Asia,1,0,1,,,,-0.401710549557942,,6,5,PF,0,5,-5,0,0
+336,Montenegrins,Yugoslavia,1993,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+336,Montenegrins,Yugoslavia,1994,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+336,Montenegrins,Yugoslavia,1995,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+336,Montenegrins,Yugoslavia,1996,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+336,Montenegrins,Yugoslavia,1997,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,6,-6,0,0
+336,Montenegrins,Yugoslavia,1998,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,3,6,6,NF,0,6,-6,0,0
+336,Montenegrins,Yugoslavia,1999,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,3,5,5,PF,0,6,-6,0,0
+336,Montenegrins,Yugoslavia,2000,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,3,4,4,PF,7,0,7,0,0
+336,Montenegrins,Yugoslavia,2001,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,4,3,3,PF,7,0,7,0,0
+336,Montenegrins,Yugoslavia,2002,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,3,2,F,7,0,7,0,0
+336,Montenegrins,Yugoslavia,2003,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2004,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2005,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2006,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2007,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2008,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2009,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2010,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2011,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2012,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2013,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2014,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2015,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2016,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2017,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2018,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2019,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+336,Montenegrins,Yugoslavia,2020,,,Christian,Sunni Muslim,Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
 401,Armenians,Azerbaijan,1991,0.02,95653,Christian,"",Europe & Central Asia,1,1,0,,7357945,,-0.518563507634795,,5,5,PF,1,4,-3,0,0
 401,Armenians,Azerbaijan,1992,0.02,97135,Christian,"",Europe & Central Asia,1,0,1,11070110.701107,7471924,446305555.555556,-0.268590578821799,1,5,5,PF,3,2,1,0,0
 401,Armenians,Azerbaijan,1993,0.02,98563,Christian,"",Europe & Central Asia,1,1,1,77519379.8449612,7581754,1.57e+09,-0.681040853050902,,6,6,NF,1,4,-3,0,0
@@ -4531,8 +4531,8 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 409,Saami,Finland,2016,,,Christian,"",Europe & Central Asia,0,0,0,3415008249.65045,5497714,240607907010.383,,3,1,1,F,10,0,10,0,0
 409,Saami,Finland,2017,,,Christian,"",Europe & Central Asia,0,0,0,3431090216.95364,5511372,255016517537.983,,3,1,1,F,10,0,10,0,0
 409,Saami,Finland,2018,,,Christian,"",Europe & Central Asia,0,0,0,3756949116.5327,5522585,275580448365.235,,3,1,1,F,10,0,10,1,0
-409,Saami,Finland,2019,,,Christian,"",Europe & Central Asia,0,0,0,3629646215.85311,5532159,268782471380.392,,3,1,1,F,,,,1,0
-409,Saami,Finland,2020,,,Christian,"",Europe & Central Asia,0,0,0,4087541319.95897,5540718,269751312854.475,,5,1,1,F,,,,0,0
+409,Saami,Finland,2019,,,Christian,"",Europe & Central Asia,0,0,0,3629646215.85311,5532159,268508200125.49,,3,1,1,F,,,,1,0
+409,Saami,Finland,2020,,,Christian,"",Europe & Central Asia,0,0,0,4087541319.95897,5540718,269594831987.549,,5,1,1,F,,,,0,0
 410,Assamese,India,1960,0.03,6307667,Hindu,Sunni Muslim,South Asia,0,0,0,681765681.765682,450547675,37029883875.4573,0.844891797687471,,,,"",5,0,5,0,0
 410,Assamese,India,1961,0.03,6434990,Hindu,Sunni Muslim,South Asia,1,0,1,748388248.388249,459642166,39232435784.0946,0.780805085242046,,,,"",5,0,5,0,0
 410,Assamese,India,1962,0.03,6567081,Hindu,Sunni Muslim,South Asia,1,0,1,1065436065.43607,469077191,42161481858.7014,0.702385836222968,,,,"",5,0,5,0,0
@@ -5285,14 +5285,14 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 427,Puntland Darods,Somalia,2010,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,,12043886,,-0.770774328876056,1,7,7,NF,,,,0,0
 427,Puntland Darods,Somalia,2011,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,,12376305,,,1,7,7,NF,,,,0,0
 427,Puntland Darods,Somalia,2012,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,,12715487,,-0.564529201566298,1,7,7,NF,5,0,5,0,0
-427,Puntland Darods,Somalia,2013,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,26050000,13063711,3892402684.75612,,1,7,7,NF,5,0,5,0,0
-427,Puntland Darods,Somalia,2014,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,60258000,13423571,3963532302.4655,,1,7,7,NF,5,0,5,0,0
-427,Puntland Darods,Somalia,2015,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,46614000,13797204,4048860871.41323,,1,7,7,NF,5,0,5,0,0
-427,Puntland Darods,Somalia,2016,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,47706000,14185635,4198485403.87919,,1,7,7,NF,5,0,5,0,0
-427,Puntland Darods,Somalia,2017,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,61813000,14589165,4508845348.32757,,1,7,7,NF,5,0,5,1,0
-427,Puntland Darods,Somalia,2018,,,Sunni Muslim,"",Sub-Saharan Africa,1,1,1,76562000,15008225,4720727283.20485,,1,7,7,NF,5,0,5,0,0
-427,Puntland Darods,Somalia,2019,,,Sunni Muslim,"",Sub-Saharan Africa,1,1,1,77535000,15442906,4942319040.69822,,1,7,7,NF,,,,0,0
-427,Puntland Darods,Somalia,2020,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,98385000,15893219,4988441439.99845,,1,7,7,NF,,,,0,0
+427,Puntland Darods,Somalia,2013,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,26050000,13063711,4574495666.99486,,1,7,7,NF,5,0,5,0,0
+427,Puntland Darods,Somalia,2014,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,60258000,13423571,5021956321.11861,,1,7,7,NF,5,0,5,0,0
+427,Puntland Darods,Somalia,2015,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,46614000,13797204,5331761394.25501,,1,7,7,NF,5,0,5,0,0
+427,Puntland Darods,Somalia,2016,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,47706000,14185635,5529873479.87153,,1,7,7,NF,5,0,5,0,0
+427,Puntland Darods,Somalia,2017,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,61813000,14589165,5.609e+09,,1,7,7,NF,5,0,5,1,0
+427,Puntland Darods,Somalia,2018,,,Sunni Muslim,"",Sub-Saharan Africa,1,1,1,76562000,15008225,5850677295.69858,,1,7,7,NF,5,0,5,0,0
+427,Puntland Darods,Somalia,2019,,,Sunni Muslim,"",Sub-Saharan Africa,1,1,1,77535000,15442906,6476674591.87348,,1,7,7,NF,,,,0,0
+427,Puntland Darods,Somalia,2020,,,Sunni Muslim,"",Sub-Saharan Africa,1,0,1,98385000,15893219,6965285324.52207,,1,7,7,NF,,,,0,0
 428,Basques,Spain,1960,0.06,1641730,Catholic,"",Europe & Central Asia,0,0,0,232839815.943989,30402413,12072126075.397,-1.19707133089143,,,,"",0,7,-7,0,0
 428,Basques,Spain,1961,0.06,1659401,Catholic,"",Europe & Central Asia,0,0,0,239348772.068642,30729650,13834300571.4849,-1.13128563546855,,,,"",0,7,-7,0,0
 428,Basques,Spain,1962,0.06,1678076,Catholic,"",Europe & Central Asia,0,0,0,308791693.470945,31075475,16138545209.246,-1.14014443309505,,,,"",0,7,-7,0,0
@@ -5621,57 +5621,57 @@ kgcid,groupname,country,year,relative_size,size,religion_1,religion_2,region,civ
 433,Scots,United Kingdom,2017,0.06,6339109,Christian,"",Europe & Central Asia,0,0,0,51633539217.1638,66727463,2699016715111.39,,4,1,1,F,8,0,8,2,0
 433,Scots,United Kingdom,2018,0.06,6378459,Christian,"",Europe & Central Asia,0,0,0,55680228214.9866,67141678,2900791442554.06,,4,1,1,F,8,0,8,0,0
 433,Scots,United Kingdom,2019,0.06,6415365,Christian,"",Europe & Central Asia,0,0,0,56856133066.0077,67530161,2878673912414.44,,4,1,1,F,,,,1,0
-433,Scots,United Kingdom,2020,0.06,6449170,Christian,"",Europe & Central Asia,0,0,0,59238462250,67886004,2764197653965.05,,3,1,1,F,,,,0,0
+433,Scots,United Kingdom,2020,0.06,6449170,Christian,"",Europe & Central Asia,0,0,0,59238462250,67886004,2759804061837.07,,3,1,1,F,,,,0,0
 434,Tajiks,Uzbekistan,1992,,1068756,Sunni Muslim,"",Europe & Central Asia,0,0,0,,21375114,12941297376.0933,-0.888123548739671,1,6,6,NF,0,9,-9,0,0
-435,Croats,Yugoslavia,1971,,,Catholic,"","",0,0,0,,,,-0.731383119175324,,,,"",0,7,-7,0,0
-435,Croats,Yugoslavia,1972,,,Catholic,"","",0,0,0,,,,-0.786548601901822,,6,6,NF,0,7,-7,0,0
-435,Croats,Yugoslavia,1973,,,Catholic,"","",0,0,0,,,,-0.785955178078026,,6,6,NF,0,7,-7,0,0
-435,Croats,Yugoslavia,1974,,,Catholic,"","",0,0,0,,,,-0.784145338212377,,6,6,NF,0,7,-7,0,0
-435,Croats,Yugoslavia,1975,,,Catholic,"","",0,0,0,,,,-0.788392545958765,1,6,6,NF,0,7,-7,0,0
-435,Croats,Yugoslavia,1976,,,Catholic,"","",0,0,0,,,,-0.784124283660842,1,6,6,NF,0,7,-7,0,0
-435,Croats,Yugoslavia,1977,,,Catholic,"","",0,0,0,,,,-0.71283584026811,1,6,5,NF,0,7,-7,0,0
-435,Croats,Yugoslavia,1978,,,Catholic,"","",0,0,0,,,,-0.709193069509496,1,6,5,NF,0,7,-7,0,0
-435,Croats,Yugoslavia,1979,,,Catholic,"","",0,0,0,,,,-0.709324972809011,1,6,5,NF,0,7,-7,0,0
-435,Croats,Yugoslavia,1980,,,Catholic,"","",0,0,0,,,,-0.676937465825286,1,6,5,NF,1,6,-5,0,0
-435,Croats,Yugoslavia,1981,,,Catholic,"","",0,0,0,,,,-0.590172281673335,1,,,"",1,6,-5,0,0
-435,Croats,Yugoslavia,1982,,,Catholic,"","",0,0,0,,,,-0.588614657926631,1,6,5,NF,1,6,-5,0,0
-435,Croats,Yugoslavia,1983,,,Catholic,"","",0,0,0,,,,-0.651699653702387,1,6,5,PF,1,6,-5,0,0
-435,Croats,Yugoslavia,1984,,,Catholic,"","",0,0,0,,,,-0.653357769889859,1,6,5,PF,1,6,-5,0,0
-435,Croats,Yugoslavia,1985,,,Catholic,"","",0,0,0,,,,-0.707409408951372,1,6,5,PF,1,6,-5,0,0
-435,Croats,Yugoslavia,1986,,,Catholic,"","",0,0,0,,,,-0.644740769951862,1,6,5,PF,1,6,-5,0,0
-435,Croats,Yugoslavia,1987,,,Catholic,"","",0,0,0,,,,-0.648939850421378,1,6,5,PF,1,6,-5,0,0
-435,Croats,Yugoslavia,1988,,,Catholic,"","",0,0,0,,,,-0.568961655971658,1,5,5,PF,1,6,-5,0,0
-435,Croats,Yugoslavia,1989,,,Catholic,"","",0,0,0,,,,-0.504236111705851,1,5,4,PF,1,6,-5,0,0
-435,Croats,Yugoslavia,1990,,,Catholic,"","",0,0,0,,,,-0.501955794827205,1,5,4,PF,0,5,-5,0,0
-435,Croats,Yugoslavia,1991,,,Catholic,"","",1,1,0,,,,-0.386222260302091,,6,5,NF,0,5,-5,0,0
-436,Sandzak Muslims,Yugoslavia,1990,,127505,Sunni Muslim,"","",0,0,0,,,,-0.501955794827205,1,5,4,PF,0,5,-5,0,0
-436,Sandzak Muslims,Yugoslavia,1991,,127505,Sunni Muslim,"","",1,1,0,,,,-0.386222260302091,,6,5,NF,0,5,-5,0,0
-436,Sandzak Muslims,Yugoslavia,1992,,127505,Sunni Muslim,"","",1,0,1,,,,-0.401710549557942,,6,5,PF,0,5,-5,0,0
-436,Sandzak Muslims,Yugoslavia,1993,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,1994,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,1995,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,1996,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,1997,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,1998,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,1999,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2000,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2001,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2002,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2003,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2004,,127884,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2005,,127537,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2006,,127094,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2007,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2008,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2009,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2010,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2011,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2012,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2013,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2014,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2015,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2016,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2017,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2018,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2019,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
-436,Sandzak Muslims,Yugoslavia,2020,,127505,Sunni Muslim,"",,,,,,,,,,,,,,,,,
+435,Croats,Yugoslavia,1971,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.731383119175324,,,,"",0,7,-7,0,0
+435,Croats,Yugoslavia,1972,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.786548601901822,,6,6,NF,0,7,-7,0,0
+435,Croats,Yugoslavia,1973,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.785955178078026,,6,6,NF,0,7,-7,0,0
+435,Croats,Yugoslavia,1974,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.784145338212377,,6,6,NF,0,7,-7,0,0
+435,Croats,Yugoslavia,1975,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.788392545958765,1,6,6,NF,0,7,-7,0,0
+435,Croats,Yugoslavia,1976,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.784124283660842,1,6,6,NF,0,7,-7,0,0
+435,Croats,Yugoslavia,1977,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.71283584026811,1,6,5,NF,0,7,-7,0,0
+435,Croats,Yugoslavia,1978,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.709193069509496,1,6,5,NF,0,7,-7,0,0
+435,Croats,Yugoslavia,1979,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.709324972809011,1,6,5,NF,0,7,-7,0,0
+435,Croats,Yugoslavia,1980,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.676937465825286,1,6,5,NF,1,6,-5,0,0
+435,Croats,Yugoslavia,1981,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.590172281673335,1,,,"",1,6,-5,0,0
+435,Croats,Yugoslavia,1982,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.588614657926631,1,6,5,NF,1,6,-5,0,0
+435,Croats,Yugoslavia,1983,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.651699653702387,1,6,5,PF,1,6,-5,0,0
+435,Croats,Yugoslavia,1984,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.653357769889859,1,6,5,PF,1,6,-5,0,0
+435,Croats,Yugoslavia,1985,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.707409408951372,1,6,5,PF,1,6,-5,0,0
+435,Croats,Yugoslavia,1986,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.644740769951862,1,6,5,PF,1,6,-5,0,0
+435,Croats,Yugoslavia,1987,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.648939850421378,1,6,5,PF,1,6,-5,0,0
+435,Croats,Yugoslavia,1988,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.568961655971658,1,5,5,PF,1,6,-5,0,0
+435,Croats,Yugoslavia,1989,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.504236111705851,1,5,4,PF,1,6,-5,0,0
+435,Croats,Yugoslavia,1990,,,Catholic,"",Europe & Central Asia,0,0,0,,,,-0.501955794827205,1,5,4,PF,0,5,-5,0,0
+435,Croats,Yugoslavia,1991,,,Catholic,"",Europe & Central Asia,1,1,0,,,,-0.386222260302091,,6,5,NF,0,5,-5,0,0
+436,Sandzak Muslims,Yugoslavia,1990,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,-0.501955794827205,1,5,4,PF,0,5,-5,0,0
+436,Sandzak Muslims,Yugoslavia,1991,,127505,Sunni Muslim,"",Europe & Central Asia,1,1,0,,,,-0.386222260302091,,6,5,NF,0,5,-5,0,0
+436,Sandzak Muslims,Yugoslavia,1992,,127505,Sunni Muslim,"",Europe & Central Asia,1,0,1,,,,-0.401710549557942,,6,5,PF,0,5,-5,0,0
+436,Sandzak Muslims,Yugoslavia,1993,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+436,Sandzak Muslims,Yugoslavia,1994,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+436,Sandzak Muslims,Yugoslavia,1995,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+436,Sandzak Muslims,Yugoslavia,1996,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,7,-7,0,0
+436,Sandzak Muslims,Yugoslavia,1997,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,4,6,6,NF,0,6,-6,0,0
+436,Sandzak Muslims,Yugoslavia,1998,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,3,6,6,NF,0,6,-6,0,0
+436,Sandzak Muslims,Yugoslavia,1999,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,3,5,5,PF,0,6,-6,0,0
+436,Sandzak Muslims,Yugoslavia,2000,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,3,4,4,PF,7,0,7,0,0
+436,Sandzak Muslims,Yugoslavia,2001,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,4,3,3,PF,7,0,7,0,0
+436,Sandzak Muslims,Yugoslavia,2002,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,3,2,F,7,0,7,0,0
+436,Sandzak Muslims,Yugoslavia,2003,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2004,,127884,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2005,,127537,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2006,,127094,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2007,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2008,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2009,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2010,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2011,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2012,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2013,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2014,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2015,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2016,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2017,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2018,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2019,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
+436,Sandzak Muslims,Yugoslavia,2020,,127505,Sunni Muslim,"",Europe & Central Asia,0,0,0,,,,,,,,"",,,,0,0
