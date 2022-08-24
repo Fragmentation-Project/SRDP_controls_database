@@ -25,19 +25,39 @@ population <- import(here::here("data-raw", "population_raw.csv")) |>
 
 skimr::skim(population)
 
-# GDP
-gdp <- gdp_raw %>% 
-  mutate(country = countrycode(country, "country.name", "country.name")) %>% 
-  select(country, year = date, gdp = value) %>% 
-  right_join(scope) %>% 
-  ungroup()
+export(population, here::here("data", "population.csv"))
 
-# Military expenditure
-milex <- milex_raw %>%
-  mutate(country = countrycode(country, "country.name", "country.name", custom_match = c("German DR" = "German Democratic Republic"))) %>% 
-  drop_na(milex) %>% 
-  right_join(scope) %>% 
-  ungroup()
+# GDP ---------------------------------------------------------------------
+
+gdp <- import(here::here("data-raw", "gdp_raw.csv")) |> 
+  transmute(country = countrycode(country, 
+                                  "country.name", 
+                                  "country.name",
+                                  custom_match = c("Turkiye" = "Turkey")),
+            year = date, 
+            gdp = value) |>  
+  right_join(scope, by = c("country", "year"))
+
+skimr::skim(gdp)
+
+export(gdp, here::here("data", "gdp.csv"))
+
+# Military expenditure ----------------------------------------------------
+
+milex <- import(here::here("data-raw", "milex_raw.rds")) |> 
+  pivot_longer(!Country:Notes, names_to = "year", values_to = "milex") |> 
+  transmute(country = countrycode(Country, 
+                                  "country.name", 
+                                  "country.name", 
+                                  custom_match = c("German DR" = "German Democratic Republic")),
+            year = as.numeric(year),
+            # Convert to raw score
+            milex = as.numeric(milex) * 1000000) |> 
+  right_join(scope, by = c("country", "year"))
+
+skimr::skim(milex)
+
+export(milex, here::here("data", "milex.csv"))
 
 # Unified Democracy Scores
 uds <- uds_raw %>% 

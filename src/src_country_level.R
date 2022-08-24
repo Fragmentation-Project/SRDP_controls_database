@@ -26,11 +26,9 @@ export(gdp_raw, here::here("data-raw", "gdp_raw.csv"))
 
 milex_raw <- import("https://sipri.org/sites/default/files/SIPRI-Milex-data-1949-2020_0.xlsx", 
                     sheet = "Current USD",
-                    skip = 4) %>% 
-  pivot_longer(!Country:Notes, names_to = "year", values_to = "milex") %>% 
-  mutate(across(year:milex, as.numeric),
-         milex = milex * 1000000) %>% # convert to raw score
-  select(country = Country, year, milex)
+                    skip = 4)
+
+export(milex_raw, here::here("data-raw", "milex_raw.rds"))
 
 # Unified Democracy Scores
 uds_raw <- read_csv("http://www.unified-democracy-scores.net/files/20140312/z/uds_summary.csv.gz") %>% 
