@@ -1,32 +1,29 @@
 # This script sources country-level data.
 
+library(rio)
 library(tidyverse)
 library(countrycode)
 library(democracyData)
 
-# Population
-population_raw <- import("https://population.un.org/wpp/Download/Files/1_Indicators%20(Standard)/EXCEL_FILES/1_Population/WPP2019_POP_F01_1_TOTAL_POPULATION_BOTH_SEXES.xlsx", 
-       sheet = "ESTIMATES", 
-       skip = 16) %>% 
-  pivot_longer(!(Index:`Parent code`), names_to = "year", values_to = "population") %>% 
-  janitor::clean_names() %>% 
-  mutate(across(year:population, as.numeric),
-         country = countrycode::countrycode(country_code, "iso3n", "country.name"), 
-         population = population * 1000) %>% # convert to raw value
-  select(country, year, population) %>% 
-  drop_na(country) %>% 
-  # fill missing data with World Bank data
-  full_join(wbstats::wb_data(indicator = "SP.POP.TOTL", return_wide = FALSE) %>% 
-              mutate(country = countrycode(country, "country.name", "country.name")) %>% 
-              select(country, year = date, wb_population = value)) %>% 
-  rowwise() %>% 
-  mutate(population = replace_na(population, wb_population)) %>% 
-  select(-wb_population)
 
-# GDP
+# Population --------------------------------------------------------------
+
+population_raw <- import(
+  "https://population.un.org/wpp/Download/Files/1_Indicators%20(Standard)/EXCEL_FILES/1_General/WPP2022_GEN_F01_DEMOGRAPHIC_INDICATORS_COMPACT_REV1.xlsx",
+  sheet = "Estimates",
+  skip = 16
+)
+
+export(population_raw, here::here("data-raw", "population_raw.csv"))
+
+# GDP ---------------------------------------------------------------------
+
 gdp_raw <- wbstats::wb_data(indicator = "NY.GDP.MKTP.CD", return_wide = FALSE)
 
-# Military expenditure
+export(gdp_raw, here::here("data-raw", "gdp_raw.csv"))
+
+# Military expenditure ----------------------------------------------------
+
 milex_raw <- import("https://sipri.org/sites/default/files/SIPRI-Milex-data-1949-2020_0.xlsx", 
                     sheet = "Current USD",
                     skip = 4) %>% 

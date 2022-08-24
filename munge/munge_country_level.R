@@ -1,17 +1,29 @@
 # This script munges country-level data. 
 
+library(rio)
 library(tidyverse)
 library(countrycode)
 library(lubridate)
 
-# Scope of the country-level dataset
+# Scope of the country-level dataset --------------------------------------
+
 scope <- distinct(sRdpPrivateData::groups, country) |> 
   crossing(year = 1960:2020)
 
-# Population
-population <- population_raw %>% 
-  right_join(scope) %>% 
-  ungroup()
+# Population --------------------------------------------------------------
+
+population <- import(here::here("data-raw", "population_raw.csv")) |> 
+  janitor::clean_names() |> 
+  filter(type == "Country/Area") |> 
+  transmute(country = countrycode::countrycode(region_subregion_country_or_area,
+                                               "country.name",
+                                               "country.name",
+                                               custom_match = c("Türkiye" = "Turkey")), 
+            year, 
+            population = as.numeric(total_population_as_of_1_january_thousands) * 1000) |> 
+  right_join(scope, by = c("country", "year"))
+
+skimr::skim(population)
 
 # GDP
 gdp <- gdp_raw %>% 
