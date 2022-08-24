@@ -6,22 +6,17 @@ library(here)
 source("src/src_group_level.R")
 
 # Scope
-group_scope <- groups_raw %>% 
-  mutate(endyear = replace_na(endyear, 2020)) %>% # restrict to SRDP year range
-  pivot_longer(startyear:endyear, values_to = "year") %>% 
-  group_by(kgcid = groupid, groupname, country) %>% 
-  expand(year = full_seq(year, 1)) %>% 
-  ungroup()
+group_scope <- groups_raw 
 
 # Country-level data
-country_level <- import(here("data", "country_level.rds"))
+country_level <- import(here("data", "country_level.csv"))
 
 # (Relative) size
 epr_to_kgc <- import(here("data-raw", "EPR to KGC.csv")) %>% 
   distinct(gwgroupid = cowgroupid, kgcid) %>% 
   filter(gwgroupid != 36532000) %>% # remove duplicate
   right_join(group_scope %>% 
-               distinct(kgcid, groupname, country))
+               distinct(kgcid, group, country))
 
 mar_to_kgc <- import(here("data-raw", "mar_to_kgc.csv"))
 
@@ -33,12 +28,12 @@ epr_relative_size <- relative_size_raw %>%
   right_join(epr_to_kgc) %>% 
   right_join(group_scope) %>% 
   ungroup() %>% 
-  select(kgcid, groupname, country, year, relative_size)
+  select(kgcid, group, country, year, relative_size)
 
 epr_size <- epr_relative_size %>% 
-  left_join(import(here("data", "country_level.rds"))) %>% 
-  mutate(epr_size = round(relative_size * population)) %>% 
-  select(kgcid, groupname, country, year, epr_size)
+  left_join(import(here("data", "country_level.csv"))) %>% 
+  mutate(epr_size = relative_size * population) %>% 
+  select(kgcid, group, country, year, epr_size)
 
 mar_relative_size <- import("http://www.mar.umd.edu/data/marupdate_20042006.csv") %>% 
   janitor::clean_names() %>% 
@@ -50,7 +45,7 @@ mar_relative_size <- import("http://www.mar.umd.edu/data/marupdate_20042006.csv"
   mutate(mar_average = mean(gpop, na.rm = TRUE)) %>% 
   rowwise() %>% 
   mutate(gpop = replace_na(gpop, mar_average)) %>% 
-  left_join(import(here("data", "country_level.rds"))) %>% 
+  left_join(import(here("data", "country_level.csv"))) %>% 
   mutate(mar_relative_size = gpop / population) %>% 
   select(kgcid, year, mar_size = gpop, mar_relative_size)
 

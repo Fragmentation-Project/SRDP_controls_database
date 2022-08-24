@@ -3,18 +3,10 @@
 library(tidyverse)
 library(countrycode)
 library(lubridate)
-source("src/src_country_level.R")
 
-# SRDP scope
-scope <- srdp_country_membership %>% 
-  mutate(country = countrycode(country, "country.name", "country.name"),
-         region = countrycode(country, "country.name", "region"), 
-         styear = 1960,
-         endyear = 2020) %>%  
-  pivot_longer(styear:endyear, values_to = "year") %>% 
-  group_by(country, region) %>% 
-  expand(year = full_seq(year, 1)) %>% 
-  ungroup()
+# Scope of the country-level dataset
+scope <- distinct(sRdpPrivateData::groups, country) |> 
+  crossing(year = 1960:2020)
 
 # Population
 population <- population_raw %>% 

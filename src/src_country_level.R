@@ -1,15 +1,8 @@
 # This script sources country-level data.
 
 library(tidyverse)
-library(rio)
-library(here)
 library(countrycode)
 library(democracyData)
-
-# SRDP membership
-srdp_country_membership <- import("/Users/harrietgoers/Documents/github/SRDP/db_migration/data-raw/SRDP_Mvmt_2019_release.dta") %>% 
-  distinct(country) %>% 
-  arrange(country)
 
 # Population
 population_raw <- import("https://population.un.org/wpp/Download/Files/1_Indicators%20(Standard)/EXCEL_FILES/1_Population/WPP2019_POP_F01_1_TOTAL_POPULATION_BOTH_SEXES.xlsx", 
