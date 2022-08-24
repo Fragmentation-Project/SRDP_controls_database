@@ -59,14 +59,21 @@ skimr::skim(milex)
 
 export(milex, here::here("data", "milex.csv"))
 
-# Unified Democracy Scores
-uds <- uds_raw %>% 
-  mutate(country = case_when(country == "Yugoslavia (Serbia)" & year < 1993 ~ "Yugoslavia",
-                             country == "Yugoslavia (Serbia)" & year >= 1993 ~ "Serbia", 
-                             TRUE ~ country),
-         country = countrycode(country, "country.name", "country.name")) %>% 
-  right_join(scope) %>% 
-  ungroup()
+# Unified Democracy Scores ------------------------------------------------
+
+uds <- import(here::here("data-raw", "uds_raw.csv")) |>  
+  pivot_longer(!ccode:`country name`, names_to = "year", values_to = "uds") |> 
+  transmute(country = case_when(`country name` == "Yugoslavia (Serbia)" & year < 1993 ~ "Yugoslavia",
+                                `country name` == "Yugoslavia (Serbia)" & year >= 1993 ~ "Serbia",
+                                TRUE ~ `country name`),
+            country = countrycode(country, "country.name", "country.name"),
+            year = as.numeric(year),
+            uds) |> 
+  right_join(scope)
+
+skimr::skim(uds)
+
+export(uds, here::here("data", "uds.csv"))
 
 # Checks and balances
 checks <- checks_raw %>% 

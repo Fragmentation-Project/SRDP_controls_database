@@ -30,9 +30,11 @@ milex_raw <- import("https://sipri.org/sites/default/files/SIPRI-Milex-data-1949
 
 export(milex_raw, here::here("data-raw", "milex_raw.rds"))
 
-# Unified Democracy Scores
-uds_raw <- read_csv("http://www.unified-democracy-scores.net/files/20140312/z/uds_summary.csv.gz") %>% 
-  select(country, year, uds = mean)
+# Unified Democracy Scores ------------------------------------------------
+
+uds_raw <- import("https://clio-infra.eu/data/UnifiedDemocracyScores(UDS)_Compact.xlsx")
+
+export(uds_raw, here::here("data-raw", "uds_raw.csv"))
 
 # Checks and balances
 checks_raw <- import(here("data-raw", "DPI2020.dta")) %>% 
