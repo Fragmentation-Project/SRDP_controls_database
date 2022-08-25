@@ -62,21 +62,14 @@ polity_raw <- democracyData::download_polity_annual()
 
 export(polity_raw, here::here("data-raw", "democracy_polity.csv"))
 
-# Elections
-elections_raw <- import("/Users/harrietgoers/Documents/github/election_dates_database/data/election_df.csv") %>% # fix this
-  filter(country != "European Union") %>% 
-  mutate(country = countrycode(country, "country.name", "country.name",
-                               custom_match = c("Autonomous Community of Andalusia" = "Spain", 
-                                                "Autonomous Community of Galicia" = "Spain", 
-                                                "Basque Country" = "Spain",
-                                                "Catalunya (Comunitat autònoma d'Espanya)" = "Spain", 
-                                                "Cooperative Republic of Guyana" = "Guyana",
-                                                "Corsica" = "France", 
-                                                "Northern Ireland" = "United Kingdom", 
-                                                "Scotland" = "United Kingdom", 
-                                                "Wales" = "United Kingdom")))
+# Elections ---------------------------------------------------------------
+# TODO: Make accessible to others
+elections_raw <- import("/Users/harrietgoers/Documents/github/election_dates_database/data/election_df.csv")
 
-# Federal - To be completed
+export(elections_raw, here::here("data-raw", "elections.csv"))
+
+# Federal - To be completed -----------------------------------------------
+
 federal_countries_raw <- tibble(
   
   country = c("Argentina", "Australia", "Austria", "Belgium", 

@@ -3,7 +3,6 @@
 library(rio)
 library(tidyverse)
 library(countrycode)
-library(lubridate)
 
 # Scope of the country-level dataset --------------------------------------
 
@@ -209,38 +208,43 @@ skimr::skim(polity)
 export(polity, here::here("data", "democracy_polity.csv"))
 
 # Elections
-elections <- elections_raw %>% 
-  mutate(year = year(date), 
+elections <- import(here::here("data-raw", "elections.csv")) |> 
+  filter(country != "European Union") %>% 
+  mutate(country = countrycode(country, "country.name", "country.name",
+                               custom_match = c("Autonomous Community of Andalusia" = "Spain", 
+                                                "Autonomous Community of Galicia" = "Spain", 
+                                                "Basque Country" = "Spain",
+                                                "Catalunya (Comunitat autònoma d'Espanya)" = "Spain", 
+                                                "Cooperative Republic of Guyana" = "Guyana",
+                                                "Corsica" = "France", 
+                                                "Northern Ireland" = "United Kingdom", 
+                                                "Scotland" = "United Kingdom", 
+                                                "Wales" = "United Kingdom")),
+         year = lubridate::year(date), 
          type = str_to_lower(type),
-         event = 1) %>% 
-  group_by(country, year, type) %>%
-  summarise(event = sum(event)) %>% 
-  pivot_wider(names_from = type, values_from = event) %>% 
-  right_join(scope) %>% 
-  mutate(across(election:referendum, ~replace_na(.x, 0))) %>% 
-  ungroup()
+         event = 1) |> 
+  group_by(country, year, type) |> 
+  summarise(event = sum(event)) |>  
+  ungroup() |> 
+  pivot_wider(names_from = type, values_from = event) |> 
+  right_join(scope, by = c("country", "year")) |>  
+  mutate(across(election:referendum, ~replace_na(.x, 0)))
 
-# Federalism
-federal_countries <- federal_countries_raw %>% 
-  mutate(country = countrycode(country, "country.name", "country.name"),
-         federal = 1) %>% 
-  distinct(country, federal) %>% 
-  right_join(scope) %>% 
-  mutate(federal = replace_na(federal, 0)) %>% 
-  ungroup()
-  
-# Compile country-level data
-df <- scope %>% 
-  left_join(civil_war) %>% 
-  left_join(civil_war_onset) %>% 
-  left_join(civil_war_prev_yr) %>% 
-  left_join(milex) %>% 
-  left_join(population) %>% 
-  left_join(gdp) %>% 
-  left_join(uds) %>% 
-  left_join(checks) %>% 
-  left_join(fh) %>% 
-  left_join(polity) %>% 
-  left_join(elections)
+export(elections, here::here("data", "elections.csv"))
 
-rio::export(df, here::here("data", "country_level.csv"))
+# Compile country-level data ----------------------------------------------
+
+df <- scope |> 
+  left_join(civil_war, by = c("country", "year")) |> 
+  left_join(civil_war_onset, by = c("country", "year")) |>  
+  left_join(civil_war_prev_yr, by = c("country", "year")) |>  
+  left_join(milex, by = c("country", "year")) |>  
+  left_join(population, by = c("country", "year")) |>  
+  left_join(gdp, by = c("country", "year")) |>  
+  left_join(uds, by = c("country", "year")) |>  
+  left_join(checks, by = c("country", "year")) |>  
+  left_join(fh, by = c("country", "year")) |> 
+  left_join(polity, by = c("country", "year")) |>  
+  left_join(elections, by = c("country", "year"))
+
+export(df, here::here("data", "00_country_level.csv"))
