@@ -3,8 +3,6 @@
 library(rio)
 library(tidyverse)
 library(countrycode)
-library(democracyData)
-
 
 # Population --------------------------------------------------------------
 # Population data is collected from UN Population. This is found in their
@@ -52,8 +50,13 @@ civil_war_raw <- import("https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-211
 
 export(civil_war_raw, here::here("data-raw", "civil_raw.csv"))
 
-# Democracy
-fh_raw <- download_fh()
+# Freedom House -----------------------------------------------------------
+
+fh_raw <- democracyData::download_fh()
+
+export(fh_raw, here::here("data-raw", "democracy_fh.csv"))
+
+# Polity ------------------------------------------------------------------
 
 polity_raw <- download_polity_annual()
 

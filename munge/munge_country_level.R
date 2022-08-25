@@ -171,13 +171,22 @@ civil_war_prev_yr <- import(here::here("data-raw", "civil_raw.csv")) |>
   right_join(scope, by = c("year", "country")) |> 
   mutate(civil_war_prev_yr = replace_na(civil_war_prev_yr, 0))
 
-# Freedom House
-fh <- fh_raw %>% 
-  mutate(country = countrycode(fh_country, "country.name", "country.name", 
-                               custom_match = c("Micronesia" = "Micronesia (Federated States of)"))) %>% 
-  select(country, year, fh_political_rights = pr, fh_civil_liberties = cl, fh_status = status) %>% 
-  right_join(scope) %>% 
-  ungroup()
+# Freedom House -----------------------------------------------------------
+
+fh <- import(here::here("data-raw", "democracy_fh.csv")) |>  
+  transmute(country = countrycode(fh_country, 
+                                  "country.name", 
+                                  "country.name",
+                                  custom_match = c("Micronesia" = "Micronesia (Federated States of)")),
+            year,
+            fh_political_rights = pr, 
+            fh_civil_liberties = cl, 
+            fh_status = status) |> 
+  right_join(scope)
+
+skimr::skim(fh)
+
+export(fh, here::here("data", "democracy_fh.csv"))
 
 # PolityV
 polity <- polity_raw %>% 
