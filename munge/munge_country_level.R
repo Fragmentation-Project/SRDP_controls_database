@@ -77,20 +77,27 @@ export(uds, here::here("data", "uds.csv"))
 
 # Checks and balances -----------------------------------------------------
 
-checks <- checks_raw %>% 
-  filter(country != "Turk Cyprus") %>%
-  mutate(country = countrycode(country, "country.name", "country.name",
-                               custom_match = c("PRC" = "China", "S. Africa" = "South Africa",
-                                                "Dom. Rep." = "Dominican Republic", 
-                                                "GDR" = "German Democratic Republic",
-                                                "ROK" = "South Korea",
-                                                "PRK" = "North Korea",
-                                                "Cent. Af. Rep." = "Central African Republic",
-                                                "P. N. Guinea" = "Papua New Guinea")),
-         checks = na_if(checks, -999)) %>% 
-  drop_na(checks) %>% 
-  right_join(scope) %>% 
-  ungroup()
+checks <- import(here::here("data-raw", "DPI2020.dta")) |> 
+  haven::zap_label() |> 
+  filter(countryname != "Turk Cyprus") |> 
+  transmute(country = countrycode(countryname, 
+                                  "country.name", 
+                                  "country.name",
+                                  custom_match = c("PRC" = "China", 
+                                                   "S. Africa" = "South Africa",
+                                                   "Dom. Rep." = "Dominican Republic",
+                                                   "GDR" = "German Democratic Republic",
+                                                   "ROK" = "South Korea",
+                                                   "PRK" = "North Korea",
+                                                   "Cent. Af. Rep." = "Central African Republic",
+                                                   "P. N. Guinea" = "Papua New Guinea")),
+            year,
+            checks = na_if(checks, -999)) |> 
+  right_join(scope, by = c("country", "year"))
+
+skimr::skim(checks)
+
+export(checks, here::here("data", "checks.csv"))
 
 # Civil war 
 civil_war <- civil_war_raw %>%

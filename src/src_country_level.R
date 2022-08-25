@@ -20,6 +20,7 @@ population_raw <- import(
 export(population_raw, here::here("data-raw", "population_raw.csv"))
 
 # GDP ---------------------------------------------------------------------
+# GDP data is collected from the World Bank. 
 
 gdp_raw <- wbstats::wb_data(indicator = "NY.GDP.MKTP.CD", return_wide = FALSE)
 
@@ -40,10 +41,9 @@ uds_raw <- import("https://clio-infra.eu/data/UnifiedDemocracyScores(UDS)_Compac
 export(uds_raw, here::here("data-raw", "uds_raw.csv"))
 
 # Checks and balances -----------------------------------------------------
+# Data collected from here: https://datacatalog.worldbank.org/search/dataset/0039819
 
-checks_raw <- import(here("data-raw", "DPI2020.dta")) %>% 
-  select(country = countryname, year, checks) %>% 
-  haven::zap_label() 
+checks_raw <- import(here("data-raw", "DPI2020.dta"))
 
 # Civil war 
 civil_war_raw <- import("https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-211-RData.zip") %>% 
