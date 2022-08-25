@@ -58,7 +58,9 @@ export(fh_raw, here::here("data-raw", "democracy_fh.csv"))
 
 # Polity ------------------------------------------------------------------
 
-polity_raw <- download_polity_annual()
+polity_raw <- democracyData::download_polity_annual()
+
+export(polity_raw, here::here("data-raw", "democracy_polity.csv"))
 
 # Elections
 elections_raw <- import("/Users/harrietgoers/Documents/github/election_dates_database/data/election_df.csv") %>% # fix this

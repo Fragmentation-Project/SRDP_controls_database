@@ -188,15 +188,25 @@ skimr::skim(fh)
 
 export(fh, here::here("data", "democracy_fh.csv"))
 
-# PolityV
-polity <- polity_raw %>% 
-  mutate(country = countrycode(polity_annual_country, "country.name", "country.name"),
-         across(democ:polity, ~if_else(.x < -10, NA_real_, .x))) %>% 
-  select(country, year, polity_democracy = democ, polity_autocracy = autoc, polity_total = polity) %>% 
-  distinct(country, year, polity_democracy, polity_autocracy, polity_total) %>% 
-  filter(country != "Sudan" | (country == "Sudan" & year == 2011 & polity_democracy == 1)) %>% 
-  right_join(scope) %>% 
-  ungroup()
+# Polity ------------------------------------------------------------------
+
+polity <- import(here::here("data-raw", "democracy_polity.csv")) |> 
+  transmute(country = countrycode(polity_annual_country, 
+                               "country.name", 
+                               "country.name"),
+            year,
+            across(democ:polity, ~ na_if(.x, .x < -10))) |> 
+  distinct(country, 
+           year, 
+           polity_democracy = democ, 
+           polity_autocracy = autoc, 
+           polity_total = polity) |> 
+  filter(country != "Sudan" | (country == "Sudan" & year == 2011 & polity_democracy == 1)) |> 
+  right_join(scope, by = c("country", "year"))
+
+skimr::skim(polity)
+
+export(polity, here::here("data", "democracy_polity.csv"))
 
 # Elections
 elections <- elections_raw %>% 
