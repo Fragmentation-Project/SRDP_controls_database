@@ -99,10 +99,15 @@ skimr::skim(checks)
 
 export(checks, here::here("data", "checks.csv"))
 
-# Civil war 
-civil_war <- civil_war_raw %>%
-  # do not need to account for multiple civil wars in one year
-  distinct(country, year) %>% 
+# Civil war ---------------------------------------------------------------
+
+civil_war <- import(here::here("data-raw", "civil_raw.csv")) |> 
+  # Only include civil wars
+  filter(type_of_conflict %in% 3:4) |>  
+  separate_rows(side_a, sep = ", ") |> 
+  select(conflict_id, country = side_a, year) |> 
+  # Do not need to account for multiple civil wars in one year
+  distinct(country, year) |>  
   mutate(country = str_remove(country, "Government of "),
          country = case_when(country == "Hyderabad" ~ "India", 
                              country == "Serbia (Yugoslavia)" & year < 1993 ~ "Yugoslavia",
@@ -110,35 +115,42 @@ civil_war <- civil_war_raw %>%
                              TRUE ~ country),
          country = countrycode(country, "country.name", "country.name"),
          year = as.numeric(year), 
-         civil_war = 1) %>% 
-  right_join(scope) %>% 
-  mutate(civil_war = replace_na(civil_war, 0)) %>% 
-  ungroup()
+         civil_war = 1) |> 
+  right_join(scope, by = c("country", "year")) |> 
+  mutate(civil_war = replace_na(civil_war, 0))
 
-# Civil war onset
-civil_war_onset <- civil_war_raw %>% 
-  mutate(country = str_remove(country, "Government of "),
+export(civil_war, here::here("data", "civil_war.csv"))
+
+# Civil war onset ---------------------------------------------------------
+
+civil_war_onset <- import(here::here("data-raw", "civil_raw.csv")) |>  
+  separate_rows(side_a, sep = ", ") |> 
+  mutate(country = str_remove(side_a, "Government of "),
          country = case_when(country == "Hyderabad" ~ "India", 
                              country == "Serbia (Yugoslavia)" & year < 1993 ~ "Yugoslavia",
                              country == "Serbia (Yugoslavia)" & year >= 1993 ~ "Serbia", 
                              TRUE ~ country),
          country = countrycode(country, "country.name", "country.name"),
-         year = as.numeric(year)) %>%
-  arrange(country, year) %>% 
-  group_by(conflict_id, country) %>% 
-  mutate(civil_war_onset = case_when(is.na(lag(year)) ~ 1, # no previous year indicates onset
+         year = as.numeric(year)) |> 
+  arrange(country, year) |> 
+  group_by(conflict_id, country)|> 
+  # No previous year indicates onset
+  mutate(civil_war_onset = case_when(is.na(lag(year)) ~ 1, 
                                      year - lag(year) > 2 ~ 1, 
-                                     TRUE ~ 0)) %>% # check whether the previously listed year is within two years
-  group_by(country, year) %>% 
-  summarise(civil_war_onset = if_else(sum(civil_war_onset) == 0, 0, 1)) %>% 
-  ungroup() %>% 
-  right_join(scope) %>% 
-  mutate(civil_war_onset = replace_na(civil_war_onset, 0)) %>% 
-  ungroup()
+                                     TRUE ~ 0)) |> 
+  group_by(country, year) |> 
+  summarise(civil_war_onset = if_else(sum(civil_war_onset) == 0, 0, 1)) |> 
+  ungroup() |> 
+  right_join(scope) |> 
+  mutate(civil_war_onset = replace_na(civil_war_onset, 0))
 
-# Civil war in previous year
-civil_war_prev_yr <- civil_war_raw %>%
-  distinct(country, year) %>% 
+export(civil_war_onset, here::here("data", "civil_war_onset.csv"))
+
+# Civil war in previous year ----------------------------------------------
+
+civil_war_prev_yr <- import(here::here("data-raw", "civil_raw.csv")) |> 
+  distinct(country = side_a, year)  |>  
+  separate_rows(country, sep = ", ") |> 
   mutate(country = str_remove(country, "Government of "),
          country = case_when(country == "Hyderabad" ~ "India", 
                              country == "Serbia (Yugoslavia)" & year < 1993 ~ "Yugoslavia",
@@ -146,16 +158,18 @@ civil_war_prev_yr <- civil_war_raw %>%
                              TRUE ~ country),
          country = countrycode(country, "country.name", "country.name"),
          year = as.numeric(year), 
-         civil_war = 1) %>% 
-  arrange(country, year) %>% 
-  group_by(country) %>% 
+         civil_war = 1) |> 
+  arrange(country, year) |> 
+  group_by(country) |> 
   mutate(civil_war_prev_yr = if_else(lag(civil_war) == 1, 1, 0),
-         civil_war_prev_yr = if_else(year != 1946, replace_na(civil_war_prev_yr, 0), civil_war_prev_yr)) %>% # account for start of dataset
-  select(-civil_war) %>% 
-  ungroup() %>% 
-  right_join(scope) %>% 
-  mutate(civil_war_prev_yr = replace_na(civil_war_prev_yr, 0)) %>% 
-  ungroup()
+         # Account for start of dataset
+         civil_war_prev_yr = if_else(year != 1946, 
+                                     replace_na(civil_war_prev_yr, 0), 
+                                     civil_war_prev_yr)) |> 
+  select(-civil_war)|> 
+  ungroup() |> 
+  right_join(scope, by = c("year", "country")) |> 
+  mutate(civil_war_prev_yr = replace_na(civil_war_prev_yr, 0))
 
 # Freedom House
 fh <- fh_raw %>% 
