@@ -7,6 +7,9 @@ library(democracyData)
 
 
 # Population --------------------------------------------------------------
+# Population data is collected from UN Population. This is found in their
+# standard projections > demographic indicators > compact (most used estimates
+# and medium projections).
 
 population_raw <- import(
   "https://population.un.org/wpp/Download/Files/1_Indicators%20(Standard)/EXCEL_FILES/1_General/WPP2022_GEN_F01_DEMOGRAPHIC_INDICATORS_COMPACT_REV1.xlsx",
@@ -36,7 +39,8 @@ uds_raw <- import("https://clio-infra.eu/data/UnifiedDemocracyScores(UDS)_Compac
 
 export(uds_raw, here::here("data-raw", "uds_raw.csv"))
 
-# Checks and balances
+# Checks and balances -----------------------------------------------------
+
 checks_raw <- import(here("data-raw", "DPI2020.dta")) %>% 
   select(country = countryname, year, checks) %>% 
   haven::zap_label() 

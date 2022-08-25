@@ -75,7 +75,8 @@ skimr::skim(uds)
 
 export(uds, here::here("data", "uds.csv"))
 
-# Checks and balances
+# Checks and balances -----------------------------------------------------
+
 checks <- checks_raw %>% 
   filter(country != "Turk Cyprus") %>%
   mutate(country = countrycode(country, "country.name", "country.name",
