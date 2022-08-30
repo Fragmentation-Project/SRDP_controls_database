@@ -239,7 +239,7 @@ fh <- import(here::here("data-raw", "democracy_fh.csv")) |>
             year,
             fh_political_rights = pr, 
             fh_civil_liberties = cl, 
-            fh_status = status) |> 
+            fh_status = na_if(status, "")) |> 
   right_join(scope)
 
 skimr::skim(fh)
@@ -260,7 +260,7 @@ polity <- import(here::here("data-raw", "democracy_polity.csv")) |>
                                "country.name", 
                                "country.name"),
             year,
-            across(democ:polity, ~ na_if(.x, .x < -10))) |> 
+            across(democ:polity, ~ replace(.x, .x < -10, NA))) |> 
   distinct(country, 
            year, 
            polity_democracy = democ, 
