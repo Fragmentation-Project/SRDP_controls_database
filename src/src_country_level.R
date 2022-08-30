@@ -41,8 +41,7 @@ export(uds_raw, here::here("data-raw", "uds_raw.csv"))
 # Checks and balances -----------------------------------------------------
 # Data collected from here: https://datacatalog.worldbank.org/search/dataset/0039819
 
-checks_raw <- import(here("data-raw", "DPI2020.dta"))
-
+checks_raw <- import(here::here("data-raw", "DPI2020.dta"))
 
 # Civil war  --------------------------------------------------------------
 

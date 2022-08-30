@@ -24,6 +24,13 @@ population <- import(here::here("data-raw", "population_raw.csv")) |>
 
 skimr::skim(population)
 
+duplicates <- population |> 
+  group_by(country, year) |> 
+  summarise(n = n()) |> 
+  filter(n > 1)
+
+stopifnot(nrow(duplicates) == 0)
+
 export(population, here::here("data", "population.csv"))
 
 # GDP ---------------------------------------------------------------------
@@ -39,12 +46,22 @@ gdp <- import(here::here("data-raw", "gdp_raw.csv")) |>
 
 skimr::skim(gdp)
 
+duplicates <- gdp |> 
+  group_by(country, year) |> 
+  summarise(n = n()) |> 
+  filter(n > 1)
+
+stopifnot(nrow(duplicates) == 0)
+
 export(gdp, here::here("data", "gdp.csv"))
 
 # Military expenditure ----------------------------------------------------
 
 milex <- import(here::here("data-raw", "milex_raw.rds")) |> 
   pivot_longer(!Country:Notes, names_to = "year", values_to = "milex") |> 
+  # Remove region names, which are confusing countrycode
+  filter(!is.na(milex),
+         milex != "xxx") |> 
   transmute(country = countrycode(Country, 
                                   "country.name", 
                                   "country.name", 
@@ -55,6 +72,13 @@ milex <- import(here::here("data-raw", "milex_raw.rds")) |>
   right_join(scope, by = c("country", "year"))
 
 skimr::skim(milex)
+
+duplicates <- milex |> 
+  group_by(country, year) |> 
+  summarise(n = n()) |> 
+  filter(n > 1)
+
+stopifnot(nrow(duplicates) == 0)
 
 export(milex, here::here("data", "milex.csv"))
 
@@ -68,9 +92,16 @@ uds <- import(here::here("data-raw", "uds_raw.csv")) |>
             country = countrycode(country, "country.name", "country.name"),
             year = as.numeric(year),
             uds) |> 
-  right_join(scope)
+  right_join(scope, by = c("country", "year"))
 
 skimr::skim(uds)
+
+duplicates <- uds |> 
+  group_by(country, year) |> 
+  summarise(n = n()) |> 
+  filter(n > 1)
+
+stopifnot(nrow(duplicates) == 0)
 
 export(uds, here::here("data", "uds.csv"))
 
@@ -96,6 +127,13 @@ checks <- import(here::here("data-raw", "DPI2020.dta")) |>
 
 skimr::skim(checks)
 
+duplicates <- checks |> 
+  group_by(country, year) |> 
+  summarise(n = n()) |> 
+  filter(n > 1)
+
+stopifnot(nrow(duplicates) == 0)
+
 export(checks, here::here("data", "checks.csv"))
 
 # Civil war ---------------------------------------------------------------
@@ -117,6 +155,13 @@ civil_war <- import(here::here("data-raw", "civil_raw.csv")) |>
          civil_war = 1) |> 
   right_join(scope, by = c("country", "year")) |> 
   mutate(civil_war = replace_na(civil_war, 0))
+
+duplicates <- civil_war |> 
+  group_by(country, year) |> 
+  summarise(n = n()) |> 
+  filter(n > 1)
+
+stopifnot(nrow(duplicates) == 0)
 
 export(civil_war, here::here("data", "civil_war.csv"))
 
@@ -143,13 +188,20 @@ civil_war_onset <- import(here::here("data-raw", "civil_raw.csv")) |>
   right_join(scope) |> 
   mutate(civil_war_onset = replace_na(civil_war_onset, 0))
 
+duplicates <- civil_war_onset |> 
+  group_by(country, year) |> 
+  summarise(n = n()) |> 
+  filter(n > 1)
+
+stopifnot(nrow(duplicates) == 0)
+
 export(civil_war_onset, here::here("data", "civil_war_onset.csv"))
 
 # Civil war in previous year ----------------------------------------------
 
 civil_war_prev_yr <- import(here::here("data-raw", "civil_raw.csv")) |> 
+  separate_rows(side_a, sep = ", ") |> 
   distinct(country = side_a, year)  |>  
-  separate_rows(country, sep = ", ") |> 
   mutate(country = str_remove(country, "Government of "),
          country = case_when(country == "Hyderabad" ~ "India", 
                              country == "Serbia (Yugoslavia)" & year < 1993 ~ "Yugoslavia",
@@ -170,6 +222,13 @@ civil_war_prev_yr <- import(here::here("data-raw", "civil_raw.csv")) |>
   right_join(scope, by = c("year", "country")) |> 
   mutate(civil_war_prev_yr = replace_na(civil_war_prev_yr, 0))
 
+duplicates <- civil_war_prev_yr |> 
+  group_by(country, year) |> 
+  summarise(n = n()) |> 
+  filter(n > 1)
+
+stopifnot(nrow(duplicates) == 0)
+
 # Freedom House -----------------------------------------------------------
 
 fh <- import(here::here("data-raw", "democracy_fh.csv")) |>  
@@ -184,6 +243,13 @@ fh <- import(here::here("data-raw", "democracy_fh.csv")) |>
   right_join(scope)
 
 skimr::skim(fh)
+
+duplicates <- fh |> 
+  group_by(country, year) |> 
+  summarise(n = n()) |> 
+  filter(n > 1)
+
+stopifnot(nrow(duplicates) == 0)
 
 export(fh, here::here("data", "democracy_fh.csv"))
 
@@ -204,6 +270,13 @@ polity <- import(here::here("data-raw", "democracy_polity.csv")) |>
   right_join(scope, by = c("country", "year"))
 
 skimr::skim(polity)
+
+duplicates <- polity |> 
+  group_by(country, year) |> 
+  summarise(n = n()) |> 
+  filter(n > 1)
+
+stopifnot(nrow(duplicates) == 0)
 
 export(polity, here::here("data", "democracy_polity.csv"))
 
@@ -229,6 +302,13 @@ elections <- import(here::here("data-raw", "elections.csv")) |>
   pivot_wider(names_from = type, values_from = event) |> 
   right_join(scope, by = c("country", "year")) |>  
   mutate(across(election:referendum, ~replace_na(.x, 0)))
+
+duplicates <- elections |> 
+  group_by(country, year) |> 
+  summarise(n = n()) |> 
+  filter(n > 1)
+
+stopifnot(nrow(duplicates) == 0)
 
 export(elections, here::here("data", "elections.csv"))
 
