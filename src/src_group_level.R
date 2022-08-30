@@ -3,11 +3,6 @@
 library(tidyverse)
 library(rio)
 
-# Group scope
-groups_raw <- sRdpPrivateData::groups
-
-rio::export(groups_raw, here::here("data-raw", "groups_raw.csv"))
-
 # Size and relative size
 relative_size_raw <- rio::import("https://icr.ethz.ch/data/epr/core/EPR-2021.csv")
 

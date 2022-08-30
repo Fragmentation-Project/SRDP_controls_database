@@ -1,37 +1,60 @@
-# This script munges the group-level data
+# This script cleans the group-level data
 
 library(tidyverse)
-library(rio)
-library(here)
-source("src/src_group_level.R")
 
-# Scope
-group_scope <- groups_raw 
+# Scope -------------------------------------------------------------------
 
-# Country-level data
-country_level <- import(here("data", "country_level.csv"))
+groups <- sRdpPrivateData::groups
 
-# (Relative) size
-epr_to_kgc <- import(here("data-raw", "EPR to KGC.csv")) %>% 
-  distinct(gwgroupid = cowgroupid, kgcid) %>% 
-  filter(gwgroupid != 36532000) %>% # remove duplicate
-  right_join(group_scope %>% 
-               distinct(kgcid, group, country))
+# Country-level data ------------------------------------------------------
 
-mar_to_kgc <- import(here("data-raw", "mar_to_kgc.csv"))
+country_level <- rio::import(here::here("data", "00_country_level.csv"))
 
-epr_relative_size <- relative_size_raw %>% 
-  mutate(id = row_number()) %>% 
-  pivot_longer(from:to, values_to = "year") %>% 
-  group_by(id, gwgroupid, group, country = statename, relative_size = size) %>% 
-  expand(year = full_seq(year, 1)) %>% 
-  right_join(epr_to_kgc) %>% 
-  right_join(group_scope) %>% 
-  ungroup() %>% 
-  select(kgcid, group, country, year, relative_size)
+# Relative size -----------------------------------------------------------
+
+# Get key between KGCID and EPR groupid
+epr_to_kgc <- import(here("data-raw", "EPR to KGC.csv")) |> 
+  filter(!is.na(kgcid),
+         # Remove duplicate
+         cowgroupid != 36532000) |> 
+  distinct(kgcid, gwgroupid = cowgroupid)
+
+# Clean and organise EPR relative size data 
+epr_relative_size <- rio::import(here::here("data-raw", "relative_size_raw.csv")) |> 
+  janitor::clean_names() |> 
+  pivot_longer(from:to, values_to = "year") |> 
+  group_by(gwgroupid, epr_relative_size = size) |> 
+  expand(year = full_seq(year, 1)) |> 
+  # Filter for SRDP groups
+  right_join(epr_to_kgc, by = "gwgroupid") |> 
+  ungroup() |> 
+  # Join to full group-level data
+  select(-gwgroupid) |> 
+  right_join(groups, by = c("year", "kgcid"))
+  
+# Complete missing data using MAR estimates
+
+# Get key between KGCID and MAR groupid
+mar_to_kgc <- import(here("data-raw", "mar_to_kgc.csv")) |> 
+  select(kgcid, numcode)
+
+mar_relative_size <- import("http://www.mar.umd.edu/data/marupdate_20042006.csv") |> 
+  janitor::clean_names() |> 
+  select(numcode, year, gpop, cpop) |> 
+  # Filter for SRDP groups
+  right_join(mar_to_kgc, by = "numcode") |> 
+  select(-numcode) |> 
+  # Get relative size
+  mutate(mar_relative_size = gpop / cpop)
+
+# Join together and replace missing data with MAR estimates
+relative_size <- epr_relative_size |> 
+  left_join(mar_relative_size, by = c("year", "kgcid"))
+
+
 
 epr_size <- epr_relative_size %>% 
-  left_join(import(here("data", "country_level.csv"))) %>% 
+  left_join(import(here("data", "00_country_level.csv"))) %>% 
   mutate(epr_size = relative_size * population) %>% 
   select(kgcid, group, country, year, epr_size)
 
@@ -45,7 +68,7 @@ mar_relative_size <- import("http://www.mar.umd.edu/data/marupdate_20042006.csv"
   mutate(mar_average = mean(gpop, na.rm = TRUE)) %>% 
   rowwise() %>% 
   mutate(gpop = replace_na(gpop, mar_average)) %>% 
-  left_join(import(here("data", "country_level.csv"))) %>% 
+  left_join(import(here("data", "00_country_level.csv"))) %>% 
   mutate(mar_relative_size = gpop / population) %>% 
   select(kgcid, year, mar_size = gpop, mar_relative_size)
 
