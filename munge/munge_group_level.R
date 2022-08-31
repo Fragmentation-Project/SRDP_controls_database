@@ -14,10 +14,9 @@ epr_to_kgc <- rio::import(here::here("data-raw", "EPR to KGC.csv")) |>
 # Clean and organise EPR relative size data 
 epr_relative_size <- rio::import(here::here("data-raw", "relative_size_raw.csv")) |> 
   janitor::clean_names() |> 
-  pivot_longer(from:to, values_to = "year") |>
-  distinct(gwgroupid, size, year) |> 
   # Create ID to deal with grouping issues
   mutate(id = row_number()) |> 
+  pivot_longer(from:to, values_to = "year") |>
   group_by(id, gwgroupid, relative_size = size) |> 
   expand(year = full_seq(year, 1)) |> 
   # Filter for SRDP groups
