@@ -293,8 +293,8 @@ elections <- import(here::here("data-raw", "elections.csv")) |>
                                                 "Northern Ireland" = "United Kingdom", 
                                                 "Scotland" = "United Kingdom", 
                                                 "Wales" = "United Kingdom")),
-         year = lubridate::year(date), 
-         type = str_to_lower(type),
+         year = as.numeric(str_sub(date, -4, -1)), 
+         type = str_to_lower(word(election, 1)),
          event = 1) |> 
   group_by(country, year, type) |> 
   summarise(event = sum(event)) |>  

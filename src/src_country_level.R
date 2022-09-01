@@ -63,7 +63,7 @@ export(polity_raw, here::here("data-raw", "democracy_polity.csv"))
 
 # Elections ---------------------------------------------------------------
 # TODO: Make accessible to others
-elections_raw <- import("/Users/harrietgoers/Documents/github/election_dates_database/data/election_df.csv")
+elections_raw <- import("https://raw.githubusercontent.com/hgoers/election_dates_database/master/data/election_df.csv")
 
 export(elections_raw, here::here("data-raw", "elections.csv"))
 

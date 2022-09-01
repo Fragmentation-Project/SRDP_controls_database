@@ -48,6 +48,7 @@ relative_size <- epr_relative_size |>
 # Religion ----------------------------------------------------------------
 
 religion <- rio::import(here::here("data-raw", "religion_raw.csv")) |> 
+  janitor::clean_names() |> 
   select(kgcid, religion_1, religion_2) |> 
   mutate(religion_2 = na_if(religion_2, ""))
 
